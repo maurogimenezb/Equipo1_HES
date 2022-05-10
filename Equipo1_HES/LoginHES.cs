@@ -25,7 +25,7 @@ namespace Equipo1_HES
         }
 
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Documentos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\repos\Equipo1_HES\Equipo1_HES\Base de Datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
