@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Equipo1_HES
 {
-    public partial class InicioHES : Form
+    public partial class HomePac : Form
     {
-        public InicioHES()
+        public HomePac()
         {
             InitializeComponent();
         }
-
     }
 }
