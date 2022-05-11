@@ -14,9 +14,12 @@ namespace Equipo1_HES
 {
     public partial class LoginHES : Form
     {
+        //conexionbd conexion = new conexionbd();
+       // SqlConnection consql = new SqlConnection();
         public LoginHES()
         {
             InitializeComponent();
+          //  consql.ConnectionString = conexion.cadena_conexion;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -61,10 +64,30 @@ namespace Equipo1_HES
                     sda.Fill(dt);
                     if (dt.Rows[0][0].ToString() == "1")
                     {
+                        /*string query;
+                        query = "Select * from DoctorTbl where DocName='"+LoginUser+ "' and DocPass='" + LoginPass + "' ";
+                        SqlCommand conx = new SqlCommand(query, con);
+                        SqlDataReader drLogin;
+                        con.Open();
+                        drLogin = conx.ExecuteReader();
+
+                        if(drLogin.Read())
+                        {
+                            LoggedInUser.User = drLogin["DocName"].ToString();
+                           // LoggedInUser.UserName = drLogin[""].ToString()+" "+drLogin[];
+
+                            drLogin.Close();
+                            conx.Dispose();
+                            con.Close();
+                        
+
+                        }*/
                         HomeDoc doctor = new HomeDoc();
                         doctor.Show();
                         this.Hide();
-                    }else
+
+                    }
+                    else
                     {
                         MessageBox.Show("Doctor no encontrado");
                     }
