@@ -88,5 +88,19 @@ namespace Equipo1_HES
             FormDel.Show();
             this.Hide();
         }
+
+        private void AdmDocBtn_Click(object sender, EventArgs e)
+        {
+            AdmDocAdd FormAdd = new AdmDocAdd();
+            FormAdd.Show();
+            this.Hide();
+        }
+
+        private void ModBtn_Click(object sender, EventArgs e)
+        {
+            AdmDocEdit FormEdit = new AdmDocEdit();
+            FormEdit.Show();
+            this.Hide();
+        }
     }
 }

@@ -49,5 +49,33 @@ namespace Equipo1_HES
                 MostrarDoc();
             }
         }
+
+        private void ModBtn_Click(object sender, EventArgs e)
+        {
+            AdmDocEdit FormEdit = new AdmDocEdit();
+            FormEdit.Show();
+            this.Hide();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            AdmDocAdd FormAdd = new AdmDocAdd();
+            FormAdd.Show();
+            this.Hide();
+        }
+
+        private void CerrarBtn_Click(object sender, EventArgs e)
+        {
+            LoginHES FormLogin = new LoginHES();
+            FormLogin.Show();
+            this.Hide();
+        }
+
+        private void AdmDocBtn_Click(object sender, EventArgs e)
+        {
+            AdmDocAdd FormAdd = new AdmDocAdd();
+            FormAdd.Show();
+            this.Hide();
+        }
     }
 }

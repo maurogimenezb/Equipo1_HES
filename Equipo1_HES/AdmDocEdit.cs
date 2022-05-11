@@ -16,6 +16,7 @@ namespace Equipo1_HES
         public AdmDocEdit()
         {
             InitializeComponent();
+            MostrarDoc();
         }
         // Hacemos la conexion a la BD
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO HES\Base de Datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
@@ -32,15 +33,68 @@ namespace Equipo1_HES
         }
         private void AdmDocEdit_Load(object sender, EventArgs e)
         {
-            MostrarDoc();
         }
         private void AdmDocDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DocId.Text = AdmDocDGV.SelectedRows[0].Cells[0].Value.ToString();
-            DName.Text = AdmDocDGV.SelectedRows[0].Cells[1].Value.ToString();
-            DPass.Text = AdmDocDGV.SelectedRows[0].Cells[2].Value.ToString();
-            DPhone.Text = AdmDocDGV.SelectedRows[0].Cells[3].Value.ToString();
+            try
+            {
+                DocId.Text = AdmDocDGV.CurrentRow.Cells[0].Value.ToString();
+                DName.Text = AdmDocDGV.CurrentRow.Cells[1].Value.ToString();
+                DPass.Text = AdmDocDGV.CurrentRow.Cells[2].Value.ToString();
+                DPhone.Text = AdmDocDGV.CurrentRow.Cells[3].Value.ToString();
+            }
 
+            catch
+            {
+
+            }
+        }
+
+        private void ModBtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "update DoctorTbl set DocName= '"+DName.Text+ "', DocPass= '" + DPass.Text + "' where DocId= " + DocId.Text + "";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Se ha modificado doctor");
+            con.Close();
+            MostrarDoc();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            AdmDocAdd FormAdd = new AdmDocAdd();
+            FormAdd.Show();
+            this.Hide();
+        }
+
+        private void DelBtn_Click(object sender, EventArgs e)
+        {
+            AdmDocDel FormDel = new AdmDocDel();
+            FormDel.Show();
+            this.Hide();
+        }
+
+        private void CerrarBtn_Click(object sender, EventArgs e)
+        {
+            LoginHES FormLogin = new LoginHES();
+            FormLogin.Show();
+            this.Hide();
+        }
+
+        private void AdmDocBtn_Click(object sender, EventArgs e)
+        {
+            AdmDocEdit FormEdit = new AdmDocEdit();
+            FormEdit.Show();
+            this.Hide();
+        }
+
+        private void AdmHomeBtn_Click(object sender, EventArgs e)
+        {
+            HomeAdm FormHomeAdm = new HomeAdm();
+            FormHomeAdm.Show();
+            this.Hide();
         }
     }
-}
+    }
+

@@ -43,7 +43,7 @@ namespace Equipo1_HES
             this.CerrarBtn = new System.Windows.Forms.Button();
             this.AdmHomeBtn = new System.Windows.Forms.Button();
             this.AdmConBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AdmDocBtn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.AdmDocDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +68,7 @@ namespace Equipo1_HES
             this.ModBtn.TabIndex = 69;
             this.ModBtn.Text = "Modificar Doctor";
             this.ModBtn.UseVisualStyleBackColor = false;
+            this.ModBtn.Click += new System.EventHandler(this.ModBtn_Click);
             // 
             // DelBtn
             // 
@@ -103,6 +104,7 @@ namespace Equipo1_HES
             this.AddBtn.TabIndex = 67;
             this.AddBtn.Text = "Agregar Doctor";
             this.AddBtn.UseVisualStyleBackColor = false;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // AdmDocDGV
             // 
@@ -169,7 +171,7 @@ namespace Equipo1_HES
             this.panel1.Controls.Add(this.CerrarBtn);
             this.panel1.Controls.Add(this.AdmHomeBtn);
             this.panel1.Controls.Add(this.AdmConBtn);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.AdmDocBtn);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -191,6 +193,7 @@ namespace Equipo1_HES
             this.CerrarBtn.TabIndex = 38;
             this.CerrarBtn.Text = "Cerrar Sesion";
             this.CerrarBtn.UseVisualStyleBackColor = false;
+            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
             // 
             // AdmHomeBtn
             // 
@@ -226,22 +229,23 @@ namespace Equipo1_HES
             this.AdmConBtn.Text = "Administrar Consultorios";
             this.AdmConBtn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // AdmDocBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(31, 177);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 30);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Administrar Doctores";
-            this.button1.UseVisualStyleBackColor = false;
+            this.AdmDocBtn.BackColor = System.Drawing.Color.White;
+            this.AdmDocBtn.FlatAppearance.BorderSize = 0;
+            this.AdmDocBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AdmDocBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.AdmDocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AdmDocBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdmDocBtn.ForeColor = System.Drawing.Color.Black;
+            this.AdmDocBtn.Location = new System.Drawing.Point(31, 177);
+            this.AdmDocBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AdmDocBtn.Name = "AdmDocBtn";
+            this.AdmDocBtn.Size = new System.Drawing.Size(159, 30);
+            this.AdmDocBtn.TabIndex = 35;
+            this.AdmDocBtn.Text = "Administrar Doctores";
+            this.AdmDocBtn.UseVisualStyleBackColor = false;
+            this.AdmDocBtn.Click += new System.EventHandler(this.AdmDocBtn_Click);
             // 
             // pictureBox3
             // 
@@ -297,7 +301,7 @@ namespace Equipo1_HES
         private System.Windows.Forms.Button CerrarBtn;
         private System.Windows.Forms.Button AdmHomeBtn;
         private System.Windows.Forms.Button AdmConBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AdmDocBtn;
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

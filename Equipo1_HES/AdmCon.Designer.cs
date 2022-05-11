@@ -176,6 +176,7 @@ namespace Equipo1_HES
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdmCon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmCon";
             this.Load += new System.EventHandler(this.AdmCon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

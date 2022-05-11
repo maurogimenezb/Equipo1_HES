@@ -17,7 +17,7 @@ namespace Equipo1_HES
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdmDocEdit ());
+            Application.Run(new LoginHES());
         }
     }
 }
