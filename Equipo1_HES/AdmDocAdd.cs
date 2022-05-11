@@ -11,15 +11,15 @@ using System.Data.SqlClient; // Se agrega para la conexion a la BD
 
 namespace Equipo1_HES
 {
-    public partial class AdmDoc : Form
+    public partial class AdmDocAdd : Form
     {
-        public AdmDoc()
+        public AdmDocAdd()
         {
             InitializeComponent();
             MostrarDoc();
         }
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\repos\Equipo1_HES\Equipo1_HES\Base de Datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO HES\Base de Datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
 
         // Para mostrar los Doctores en el Data
@@ -61,22 +61,6 @@ namespace Equipo1_HES
             }
         }
 
-        int Key = 0;
-        private void AdmDocDGV_Mostrar (object sender, DataGridViewCellEventArgs e)
-        {
-            DName.Text = AdmDocDGV.SelectedRows[0].Cells[1].Value.ToString();
-            DPass.Text = AdmDocDGV.SelectedRows[0].Cells[2].Value.ToString();
-            DPhone.Text = AdmDocDGV.SelectedRows[0].Cells[3].Value.ToString();
-
-            if (DName.Text == "")
-            {
-                Key = 0;
-            } else
-            {
-                Key = Convert.ToInt32(DName.Text = AdmDocDGV.SelectedRows[0].Cells[0].Value.ToString());
-            }
-        }
-
         private void CerrarBtn_Click(object sender, EventArgs e)
         {
             LoginHES cerrar = new LoginHES();
@@ -95,6 +79,13 @@ namespace Equipo1_HES
         {
             AdmCon cons = new AdmCon();
             cons.Show();
+            this.Hide();
+        }
+
+        private void DelBtn_Click(object sender, EventArgs e)
+        {
+            AdmDocDel FormDel = new AdmDocDel();
+            FormDel.Show();
             this.Hide();
         }
     }

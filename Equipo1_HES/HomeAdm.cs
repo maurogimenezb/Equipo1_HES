@@ -26,7 +26,7 @@ namespace Equipo1_HES
 
         private void AdmDocBtn_Click(object sender, EventArgs e)
         {
-            AdmDoc doc = new AdmDoc();
+            AdmDocAdd doc = new AdmDocAdd();
             doc.Show();
             this.Hide();
         }

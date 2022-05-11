@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Base de Datos\**" />
+    <EmbeddedResource Remove="Base de Datos\**" />
+    <None Remove="Base de Datos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="microsoft.data.sqlclient" Version="4.1.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
@@ -24,10 +30,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Base de Datos\" />
   </ItemGroup>
 
 </Project>
