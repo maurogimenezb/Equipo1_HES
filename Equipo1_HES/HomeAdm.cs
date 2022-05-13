@@ -37,5 +37,17 @@ namespace Equipo1_HES
             cons.Show();
             this.Hide();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            AdmDocAdd doc = new AdmDocAdd();
+            doc.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

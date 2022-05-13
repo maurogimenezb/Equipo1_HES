@@ -47,8 +47,12 @@ namespace Equipo1_HES
             this.LblDOB = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnMin = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,11 +69,13 @@ namespace Equipo1_HES
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.BackColor = System.Drawing.Color.White;
+            this.CerrarBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarBtn.BackgroundImage")));
             this.CerrarBtn.FlatAppearance.BorderSize = 0;
-            this.CerrarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.CerrarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.CerrarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.CerrarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.CerrarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CerrarBtn.ForeColor = System.Drawing.Color.Black;
             this.CerrarBtn.Location = new System.Drawing.Point(31, 340);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -82,10 +88,11 @@ namespace Equipo1_HES
             // 
             // AdmHomeBtn
             // 
-            this.AdmHomeBtn.BackColor = System.Drawing.Color.White;
+            this.AdmHomeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AdmHomeBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdmHomeBtn.BackgroundImage")));
             this.AdmHomeBtn.FlatAppearance.BorderSize = 0;
-            this.AdmHomeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdmHomeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.AdmHomeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AdmHomeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AdmHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdmHomeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmHomeBtn.ForeColor = System.Drawing.Color.Black;
@@ -100,10 +107,11 @@ namespace Equipo1_HES
             // 
             // AdmDocBtn
             // 
-            this.AdmDocBtn.BackColor = System.Drawing.Color.White;
+            this.AdmDocBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AdmDocBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdmDocBtn.BackgroundImage")));
             this.AdmDocBtn.FlatAppearance.BorderSize = 0;
-            this.AdmDocBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AdmDocBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.AdmDocBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AdmDocBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AdmDocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdmDocBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmDocBtn.ForeColor = System.Drawing.Color.Black;
@@ -215,17 +223,18 @@ namespace Equipo1_HES
             // 
             // AddBtn
             // 
-            this.AddBtn.BackColor = System.Drawing.Color.SeaGreen;
+            this.AddBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AddBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddBtn.BackgroundImage")));
             this.AddBtn.FlatAppearance.BorderSize = 0;
             this.AddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddBtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
             this.AddBtn.Location = new System.Drawing.Point(369, 295);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(126, 30);
+            this.AddBtn.Size = new System.Drawing.Size(160, 30);
             this.AddBtn.TabIndex = 71;
             this.AddBtn.Text = "Editar Perfil";
             this.AddBtn.UseVisualStyleBackColor = false;
@@ -264,13 +273,37 @@ namespace Equipo1_HES
             this.label6.TabIndex = 74;
             this.label6.Text = "PERFIL DEL PACIENTE";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(651, 3);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(24, 22);
+            this.btnCerrar.TabIndex = 45;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnMin
+            // 
+            this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
+            this.btnMin.Location = new System.Drawing.Point(613, 12);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(32, 13);
+            this.btnMin.TabIndex = 44;
+            this.btnMin.TabStop = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
             // PacProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(680, 380);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnMin);
             this.Controls.Add(this.LblDOB);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.AddBtn);
@@ -290,6 +323,8 @@ namespace Equipo1_HES
             this.Load += new System.EventHandler(this.PacProf_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,5 +349,7 @@ namespace Equipo1_HES
         private System.Windows.Forms.Label LblDOB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.PictureBox btnMin;
     }
 }

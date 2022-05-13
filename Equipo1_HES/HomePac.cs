@@ -26,12 +26,20 @@ namespace Equipo1_HES
 
         private void btnMin_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            Application.Exit();
 
+        }
+
+        private void CerrarBtn_Click(object sender, EventArgs e)
+        {
+            LoginHES cerrar = new LoginHES();
+            cerrar.Show();
+            this.Hide();
         }
     }
 }

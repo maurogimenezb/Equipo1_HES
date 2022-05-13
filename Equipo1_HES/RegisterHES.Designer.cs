@@ -180,14 +180,14 @@ namespace Equipo1_HES
             this.AtrasBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AtrasBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.AtrasBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AtrasBtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AtrasBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AtrasBtn.ForeColor = System.Drawing.Color.Black;
             this.AtrasBtn.Location = new System.Drawing.Point(33, 339);
             this.AtrasBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AtrasBtn.Name = "AtrasBtn";
             this.AtrasBtn.Size = new System.Drawing.Size(160, 30);
             this.AtrasBtn.TabIndex = 43;
-            this.AtrasBtn.Text = "  Volver Atras";
+            this.AtrasBtn.Text = "Volver Atras";
             this.AtrasBtn.UseVisualStyleBackColor = false;
             this.AtrasBtn.Click += new System.EventHandler(this.AtrasBtn_Click);
             // 
@@ -242,9 +242,14 @@ namespace Equipo1_HES
             // 
             // PDOB
             // 
+            this.PDOB.CalendarFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PDOB.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.PDOB.Location = new System.Drawing.Point(401, 289);
             this.PDOB.Name = "PDOB";
-            this.PDOB.Size = new System.Drawing.Size(213, 23);
+            this.PDOB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.PDOB.ShowCheckBox = true;
+            this.PDOB.Size = new System.Drawing.Size(121, 23);
             this.PDOB.TabIndex = 42;
             this.PDOB.Value = new System.DateTime(2022, 5, 12, 22, 24, 42, 0);
             // 
