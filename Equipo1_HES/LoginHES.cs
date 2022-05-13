@@ -14,8 +14,10 @@ namespace Equipo1_HES
 {
     public partial class LoginHES : Form
     {
+        // Hacemos la conexion a la BD
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO HES\Base de Datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
         //conexionbd conexion = new conexionbd();
-       // SqlConnection consql = new SqlConnection();
+        // SqlConnection consql = new SqlConnection();
         public LoginHES()
         {
             InitializeComponent();
@@ -27,8 +29,6 @@ namespace Equipo1_HES
             Application.Exit();
         }
 
-        // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\TP Hospital\BD Espiritu Santo\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
@@ -108,18 +108,27 @@ namespace Equipo1_HES
                     sda.Fill(dt);
                     if (dt.Rows[0][0].ToString() == "1")
                     {
-                        HomePac paciente = new HomePac();
-                        paciente.Show();
+                        HomePac PacHome = new HomePac();
+                        //PacUpd paciente = new PacUpd();
+                        PacHome.Show();
                         //Para mostrar en los TextBox
                         SqlCommand leer = new SqlCommand("Select * from PacienteTbl where PacName='" + LoginUser.Text + "'", con);
                         SqlDataReader datos = leer.ExecuteReader();
 
                         if(datos.Read()==true)
                         {
-                            paciente.textNombre.Text = datos["PacName"].ToString();
-                            paciente.textCodigo.Text = datos["PacPass"].ToString();
-                            paciente.textSexo.Text = datos["PacGen"].ToString();
-                            paciente.textTelefono.Text = datos["PacPhone"].ToString();
+                            /* paciente.textNombre.Text = datos["PacName"].ToString();
+                             paciente.textCodigo.Text = datos["PacPass"].ToString();
+                             paciente.textSexo.Text = datos["PacGen"].ToString();
+                             paciente.textTelefono.Text = datos["PacPhone"].ToString(); */
+                            PacLogged.name = datos["PacName"].ToString();
+                            PacLogged.pass = datos["PacPass"].ToString();
+                            PacLogged.sexo = datos["PacGen"].ToString();
+                            PacLogged.phone = datos["PacPhone"].ToString();
+                            PacLogged.nac = datos["PacDOB"].ToString();
+                            PacLogged.id = datos["PacId"].ToString();
+
+
                         }
                         datos.Close();
                         //Termina para mostrar TextBox
@@ -141,6 +150,12 @@ namespace Equipo1_HES
             RegisterHES register = new RegisterHES();
             register.Show();
             this.Hide();
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
         }
     }
 }

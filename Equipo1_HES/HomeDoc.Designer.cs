@@ -36,7 +36,6 @@ namespace Equipo1_HES
             this.AdmConBtn = new System.Windows.Forms.Button();
             this.AdmDocBtn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.LblText = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -112,14 +111,14 @@ namespace Equipo1_HES
             this.AdmDocBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdmDocBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.AdmDocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdmDocBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdmDocBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmDocBtn.ForeColor = System.Drawing.Color.Black;
             this.AdmDocBtn.Location = new System.Drawing.Point(31, 177);
             this.AdmDocBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmDocBtn.Name = "AdmDocBtn";
             this.AdmDocBtn.Size = new System.Drawing.Size(159, 30);
             this.AdmDocBtn.TabIndex = 35;
-            this.AdmDocBtn.Text = "Administrar Doctores";
+            this.AdmDocBtn.Text = "Perfil";
             this.AdmDocBtn.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
@@ -131,22 +130,11 @@ namespace Equipo1_HES
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // LblText
-            // 
-            this.LblText.AutoSize = true;
-            this.LblText.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblText.Location = new System.Drawing.Point(404, 137);
-            this.LblText.Name = "LblText";
-            this.LblText.Size = new System.Drawing.Size(78, 32);
-            this.LblText.TabIndex = 41;
-            this.LblText.Text = "label1";
-            // 
             // HomeDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 380);
-            this.Controls.Add(this.LblText);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomeDoc";
@@ -156,7 +144,6 @@ namespace Equipo1_HES
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -168,6 +155,5 @@ namespace Equipo1_HES
         private System.Windows.Forms.Button AdmConBtn;
         private System.Windows.Forms.Button AdmDocBtn;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label LblText;
     }
 }

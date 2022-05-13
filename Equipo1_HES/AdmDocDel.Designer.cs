@@ -54,7 +54,7 @@ namespace Equipo1_HES
             // 
             // ModBtn
             // 
-            this.ModBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ModBtn.BackColor = System.Drawing.Color.MediumBlue;
             this.ModBtn.FlatAppearance.BorderSize = 0;
             this.ModBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ModBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;

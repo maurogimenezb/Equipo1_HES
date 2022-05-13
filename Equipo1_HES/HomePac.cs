@@ -17,11 +17,21 @@ namespace Equipo1_HES
             InitializeComponent();
         }
 
-        private void CerrarBtn_Click(object sender, EventArgs e)
+        private void AdmDocBtn_Click(object sender, EventArgs e)
         {
-            LoginHES FormLogin = new LoginHES();
-            FormLogin.Show();
+            PacProf FormPacProf = new PacProf();
+            FormPacProf.Show(); 
             this.Hide();
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

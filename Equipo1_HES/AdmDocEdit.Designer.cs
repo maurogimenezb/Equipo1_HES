@@ -50,6 +50,7 @@ namespace Equipo1_HES
             this.AdmDocBtn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.DocId = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.AdmDocDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -95,7 +96,8 @@ namespace Equipo1_HES
             // 
             // AddBtn
             // 
-            this.AddBtn.BackColor = System.Drawing.Color.SeaGreen;
+            this.AddBtn.BackColor = System.Drawing.Color.White;
+            this.AddBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddBtn.BackgroundImage")));
             this.AddBtn.FlatAppearance.BorderSize = 0;
             this.AddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
@@ -105,7 +107,7 @@ namespace Equipo1_HES
             this.AddBtn.Location = new System.Drawing.Point(323, 191);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(126, 30);
+            this.AddBtn.Size = new System.Drawing.Size(100, 30);
             this.AddBtn.TabIndex = 67;
             this.AddBtn.Text = "Agregar Doctor";
             this.AddBtn.UseVisualStyleBackColor = false;
@@ -150,9 +152,10 @@ namespace Equipo1_HES
             // 
             // DName
             // 
-            this.DName.Location = new System.Drawing.Point(377, 83);
+            this.DName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DName.Location = new System.Drawing.Point(380, 87);
             this.DName.Name = "DName";
-            this.DName.Size = new System.Drawing.Size(121, 23);
+            this.DName.Size = new System.Drawing.Size(121, 16);
             this.DName.TabIndex = 63;
             // 
             // txtType
@@ -222,16 +225,18 @@ namespace Equipo1_HES
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.BackColor = System.Drawing.Color.White;
+            this.CerrarBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarBtn.BackgroundImage")));
             this.CerrarBtn.FlatAppearance.BorderSize = 0;
             this.CerrarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.CerrarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.CerrarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CerrarBtn.ForeColor = System.Drawing.Color.Black;
             this.CerrarBtn.Location = new System.Drawing.Point(31, 340);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CerrarBtn.Name = "CerrarBtn";
-            this.CerrarBtn.Size = new System.Drawing.Size(159, 30);
+            this.CerrarBtn.Size = new System.Drawing.Size(160, 30);
             this.CerrarBtn.TabIndex = 38;
             this.CerrarBtn.Text = "Cerrar Sesion";
             this.CerrarBtn.UseVisualStyleBackColor = false;
@@ -239,7 +244,8 @@ namespace Equipo1_HES
             // 
             // AdmHomeBtn
             // 
-            this.AdmHomeBtn.BackColor = System.Drawing.Color.White;
+            this.AdmHomeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AdmHomeBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdmHomeBtn.BackgroundImage")));
             this.AdmHomeBtn.FlatAppearance.BorderSize = 0;
             this.AdmHomeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdmHomeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
@@ -257,7 +263,8 @@ namespace Equipo1_HES
             // 
             // AdmConBtn
             // 
-            this.AdmConBtn.BackColor = System.Drawing.Color.White;
+            this.AdmConBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AdmConBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdmConBtn.BackgroundImage")));
             this.AdmConBtn.FlatAppearance.BorderSize = 0;
             this.AdmConBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdmConBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
@@ -274,7 +281,8 @@ namespace Equipo1_HES
             // 
             // AdmDocBtn
             // 
-            this.AdmDocBtn.BackColor = System.Drawing.Color.White;
+            this.AdmDocBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AdmDocBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdmDocBtn.BackgroundImage")));
             this.AdmDocBtn.FlatAppearance.BorderSize = 0;
             this.AdmDocBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AdmDocBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
@@ -306,12 +314,21 @@ namespace Equipo1_HES
             this.DocId.Size = new System.Drawing.Size(37, 23);
             this.DocId.TabIndex = 71;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Location = new System.Drawing.Point(377, 102);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(121, 1);
+            this.panel2.TabIndex = 72;
+            // 
             // AdmDocEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(680, 380);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.DocId);
             this.Controls.Add(this.ModBtn);
             this.Controls.Add(this.DelBtn);
@@ -364,5 +381,6 @@ namespace Equipo1_HES
         private System.Windows.Forms.Button AdmDocBtn;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox DocId;
+        private System.Windows.Forms.Panel panel2;
     }
 }

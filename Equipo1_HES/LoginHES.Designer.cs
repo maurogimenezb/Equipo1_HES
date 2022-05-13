@@ -44,6 +44,8 @@ namespace Equipo1_HES
             this.txtType = new System.Windows.Forms.Label();
             this.LoginUser = new System.Windows.Forms.TextBox();
             this.LoginPass = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
@@ -71,27 +73,30 @@ namespace Equipo1_HES
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(282, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 20);
+            this.label1.Size = new System.Drawing.Size(348, 23);
             this.label1.TabIndex = 11;
             this.label1.Text = "Hospital Universitario ¨Espiritu Santo¨";
             // 
             // LoginBtn
             // 
-            this.LoginBtn.BackColor = System.Drawing.Color.White;
+            this.LoginBtn.BackColor = System.Drawing.Color.Transparent;
+            this.LoginBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginBtn.BackgroundImage")));
             this.LoginBtn.FlatAppearance.BorderSize = 0;
             this.LoginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.LoginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginBtn.ForeColor = System.Drawing.Color.Black;
-            this.LoginBtn.Location = new System.Drawing.Point(269, 221);
+            this.LoginBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LoginBtn.ForeColor = System.Drawing.Color.White;
+            this.LoginBtn.Location = new System.Drawing.Point(401, 221);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(357, 30);
+            this.LoginBtn.Size = new System.Drawing.Size(100, 30);
             this.LoginBtn.TabIndex = 14;
-            this.LoginBtn.Text = "ACCEDER";
+            this.LoginBtn.Text = "  Acceder";
+            this.LoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LoginBtn.UseVisualStyleBackColor = false;
             this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
@@ -110,35 +115,39 @@ namespace Equipo1_HES
             // 
             // RegisterBtn
             // 
-            this.RegisterBtn.BackColor = System.Drawing.Color.White;
+            this.RegisterBtn.BackColor = System.Drawing.Color.Transparent;
+            this.RegisterBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegisterBtn.BackgroundImage")));
             this.RegisterBtn.FlatAppearance.BorderSize = 0;
             this.RegisterBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.RegisterBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisterBtn.ForeColor = System.Drawing.Color.Black;
-            this.RegisterBtn.Location = new System.Drawing.Point(269, 303);
+            this.RegisterBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RegisterBtn.ForeColor = System.Drawing.Color.White;
+            this.RegisterBtn.Location = new System.Drawing.Point(401, 312);
             this.RegisterBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegisterBtn.Name = "RegisterBtn";
-            this.RegisterBtn.Size = new System.Drawing.Size(357, 30);
+            this.RegisterBtn.Size = new System.Drawing.Size(100, 30);
             this.RegisterBtn.TabIndex = 16;
-            this.RegisterBtn.Text = "REGISTRARME";
+            this.RegisterBtn.Text = "  Registrar";
+            this.RegisterBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RegisterBtn.UseVisualStyleBackColor = false;
             this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 
             // btnMin
             // 
             this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
-            this.btnMin.Location = new System.Drawing.Point(606, 11);
+            this.btnMin.Location = new System.Drawing.Point(617, 11);
             this.btnMin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(32, 13);
             this.btnMin.TabIndex = 17;
             this.btnMin.TabStop = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // btnCerrar
             // 
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(644, 2);
+            this.btnCerrar.Location = new System.Drawing.Point(655, 2);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(24, 22);
@@ -170,6 +179,8 @@ namespace Equipo1_HES
             // 
             // LoginRol
             // 
+            this.LoginRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LoginRol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LoginRol.FormattingEnabled = true;
             this.LoginRol.Items.AddRange(new object[] {
             "Administrador",
@@ -177,7 +188,7 @@ namespace Equipo1_HES
             "Paciente"});
             this.LoginRol.Location = new System.Drawing.Point(401, 93);
             this.LoginRol.Name = "LoginRol";
-            this.LoginRol.Size = new System.Drawing.Size(121, 23);
+            this.LoginRol.Size = new System.Drawing.Size(121, 25);
             this.LoginRol.TabIndex = 21;
             // 
             // txtType
@@ -193,17 +204,37 @@ namespace Equipo1_HES
             // 
             // LoginUser
             // 
-            this.LoginUser.Location = new System.Drawing.Point(401, 136);
+            this.LoginUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LoginUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LoginUser.Location = new System.Drawing.Point(401, 143);
             this.LoginUser.Name = "LoginUser";
-            this.LoginUser.Size = new System.Drawing.Size(121, 23);
+            this.LoginUser.Size = new System.Drawing.Size(121, 16);
             this.LoginUser.TabIndex = 23;
             // 
             // LoginPass
             // 
-            this.LoginPass.Location = new System.Drawing.Point(401, 177);
+            this.LoginPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LoginPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LoginPass.Location = new System.Drawing.Point(401, 184);
             this.LoginPass.Name = "LoginPass";
-            this.LoginPass.Size = new System.Drawing.Size(121, 23);
+            this.LoginPass.Size = new System.Drawing.Size(121, 16);
             this.LoginPass.TabIndex = 24;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gray;
+            this.panel2.Location = new System.Drawing.Point(401, 160);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(121, 1);
+            this.panel2.TabIndex = 73;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.Location = new System.Drawing.Point(401, 201);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(121, 1);
+            this.panel3.TabIndex = 74;
             // 
             // LoginHES
             // 
@@ -211,6 +242,8 @@ namespace Equipo1_HES
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(680, 380);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.LoginPass);
             this.Controls.Add(this.LoginUser);
             this.Controls.Add(this.txtType);
@@ -253,6 +286,8 @@ namespace Equipo1_HES
         private System.Windows.Forms.Label txtType;
         private System.Windows.Forms.TextBox LoginUser;
         private System.Windows.Forms.TextBox LoginPass;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

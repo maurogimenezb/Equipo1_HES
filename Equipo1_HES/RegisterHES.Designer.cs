@@ -41,13 +41,13 @@ namespace Equipo1_HES
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.AtrasBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.PPhone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.PDOB = new System.Windows.Forms.DateTimePicker();
-            this.AtrasBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             this.panel1.SuspendLayout();
@@ -115,7 +115,7 @@ namespace Equipo1_HES
             // btnCerrar
             // 
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(644, 2);
+            this.btnCerrar.Location = new System.Drawing.Point(655, 2);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(24, 22);
@@ -125,7 +125,7 @@ namespace Equipo1_HES
             // btnMin
             // 
             this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
-            this.btnMin.Location = new System.Drawing.Point(606, 11);
+            this.btnMin.Location = new System.Drawing.Point(617, 11);
             this.btnMin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(32, 13);
@@ -135,17 +135,20 @@ namespace Equipo1_HES
             // RegisterBtn
             // 
             this.RegisterBtn.BackColor = System.Drawing.Color.White;
+            this.RegisterBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegisterBtn.BackgroundImage")));
             this.RegisterBtn.FlatAppearance.BorderSize = 0;
             this.RegisterBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.RegisterBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisterBtn.ForeColor = System.Drawing.Color.Black;
+            this.RegisterBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RegisterBtn.ForeColor = System.Drawing.Color.White;
             this.RegisterBtn.Location = new System.Drawing.Point(411, 339);
             this.RegisterBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegisterBtn.Name = "RegisterBtn";
-            this.RegisterBtn.Size = new System.Drawing.Size(97, 30);
+            this.RegisterBtn.Size = new System.Drawing.Size(100, 30);
             this.RegisterBtn.TabIndex = 27;
-            this.RegisterBtn.Text = "REGISTRARSE";
+            this.RegisterBtn.Text = "   Registrar";
+            this.RegisterBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RegisterBtn.UseVisualStyleBackColor = false;
             this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 
@@ -168,6 +171,25 @@ namespace Equipo1_HES
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 380);
             this.panel1.TabIndex = 25;
+            // 
+            // AtrasBtn
+            // 
+            this.AtrasBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AtrasBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AtrasBtn.BackgroundImage")));
+            this.AtrasBtn.FlatAppearance.BorderSize = 0;
+            this.AtrasBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AtrasBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.AtrasBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AtrasBtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AtrasBtn.ForeColor = System.Drawing.Color.Black;
+            this.AtrasBtn.Location = new System.Drawing.Point(33, 339);
+            this.AtrasBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AtrasBtn.Name = "AtrasBtn";
+            this.AtrasBtn.Size = new System.Drawing.Size(160, 30);
+            this.AtrasBtn.TabIndex = 43;
+            this.AtrasBtn.Text = "  Volver Atras";
+            this.AtrasBtn.UseVisualStyleBackColor = false;
+            this.AtrasBtn.Click += new System.EventHandler(this.AtrasBtn_Click);
             // 
             // pictureBox1
             // 
@@ -224,23 +246,7 @@ namespace Equipo1_HES
             this.PDOB.Name = "PDOB";
             this.PDOB.Size = new System.Drawing.Size(213, 23);
             this.PDOB.TabIndex = 42;
-            // 
-            // AtrasBtn
-            // 
-            this.AtrasBtn.BackColor = System.Drawing.Color.White;
-            this.AtrasBtn.FlatAppearance.BorderSize = 0;
-            this.AtrasBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AtrasBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.AtrasBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AtrasBtn.ForeColor = System.Drawing.Color.Black;
-            this.AtrasBtn.Location = new System.Drawing.Point(69, 339);
-            this.AtrasBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AtrasBtn.Name = "AtrasBtn";
-            this.AtrasBtn.Size = new System.Drawing.Size(75, 30);
-            this.AtrasBtn.TabIndex = 43;
-            this.AtrasBtn.Text = "ATRAS";
-            this.AtrasBtn.UseVisualStyleBackColor = false;
-            this.AtrasBtn.Click += new System.EventHandler(this.AtrasBtn_Click);
+            this.PDOB.Value = new System.DateTime(2022, 5, 12, 22, 24, 42, 0);
             // 
             // RegisterHES
             // 
