@@ -217,6 +217,7 @@ namespace Equipo1_HES
             this.LoginPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LoginPass.Location = new System.Drawing.Point(401, 184);
             this.LoginPass.Name = "LoginPass";
+            this.LoginPass.PasswordChar = '*';
             this.LoginPass.Size = new System.Drawing.Size(121, 16);
             this.LoginPass.TabIndex = 24;
             // 

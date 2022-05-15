@@ -17,6 +17,8 @@ namespace Equipo1_HES
         {
             InitializeComponent();
             MostrarDoc();
+            MostrarCons();
+
         }
         // Hacemos la conexion a la BD
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO HES\Base de Datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
@@ -32,6 +34,20 @@ namespace Equipo1_HES
             AdmDocDGV.DataSource = ds.Tables[0];
             con.Close();
         }
+
+        private void MostrarCons()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select ConName from ConsultorioTbl", con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ConName");
+            dt.Load(rdr);
+            DCons.ValueMember = "ConName";
+            DCons.DataSource = dt;
+            con.Close();
+        }
         private void AdmDocEdit_Load(object sender, EventArgs e)
         {
         }
@@ -42,7 +58,11 @@ namespace Equipo1_HES
                 DocId.Text = AdmDocDGV.CurrentRow.Cells[0].Value.ToString();
                 DName.Text = AdmDocDGV.CurrentRow.Cells[1].Value.ToString();
                 DPass.Text = AdmDocDGV.CurrentRow.Cells[2].Value.ToString();
-                DPhone.Text = AdmDocDGV.CurrentRow.Cells[3].Value.ToString();
+                DSpec.Text = AdmDocDGV.CurrentRow.Cells[3].Value.ToString();
+                DCons.Text = AdmDocDGV.CurrentRow.Cells[5].Value.ToString();
+                DLastName.Text = AdmDocDGV.CurrentRow.Cells[6].Value.ToString();
+                DUser.Text = AdmDocDGV.CurrentRow.Cells[7].Value.ToString();
+
             }
 
             catch
@@ -54,7 +74,7 @@ namespace Equipo1_HES
         private void ModBtn_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "update DoctorTbl set DocName= '"+DName.Text+ "', DocPass= '" + DPass.Text + "' where DocId= " + DocId.Text + "";
+            string query = "update DoctorTbl set DocName= '"+DName.Text+ "', DocPass= '" + DPass.Text + "', DocSpec= '" + DSpec.Text + "', DocCon= '" + DCons.Text + "', DocLastName= '" + DLastName.Text + "', DocUser= '" + DUser.Text + "' where DocId= " + DocId.Text + "";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Se ha modificado doctor");

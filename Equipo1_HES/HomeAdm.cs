@@ -33,7 +33,7 @@ namespace Equipo1_HES
 
         private void AdmConBtn_Click(object sender, EventArgs e)
         {
-            AdmCon cons = new AdmCon();
+            AdmConAdd cons = new AdmConAdd();
             cons.Show();
             this.Hide();
         }

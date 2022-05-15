@@ -28,5 +28,15 @@ namespace Equipo1_HES
         {
             //LblText.Text = LoggedInUser.UserName;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

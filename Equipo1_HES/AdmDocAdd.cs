@@ -17,6 +17,7 @@ namespace Equipo1_HES
         {
             InitializeComponent();
             MostrarDoc();
+            MostrarCons();
         }
         // Hacemos la conexion a la BD
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO HES\Base de Datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
@@ -34,9 +35,23 @@ namespace Equipo1_HES
             AdmDocDGV.DataSource = ds.Tables[0];
             con.Close();
         }
+        private void MostrarCons ()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select ConName from ConsultorioTbl", con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ConName");
+            dt.Load(rdr);
+            DCons.ValueMember = "ConName";
+            DCons.DataSource = dt;
+            con.Close();
+        }
+
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            if (DName.Text == "" || DPass.Text == "" || DPhone.Text == "")
+            if (DName.Text == "" || DPass.Text == "" || DSpec.Text == "" || DLastName.Text == "" || DUser.Text == "")
             {
                 MessageBox.Show("Falta Informacion");
             } else
@@ -44,13 +59,15 @@ namespace Equipo1_HES
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into DoctorTbl(DocName,DocPass,DocPhone)values(@DN,@DP,@DPh)", con);
+                    SqlCommand cmd = new SqlCommand("insert into DoctorTbl(DocName,DocPass,DocSpec,DocCon,DocLastName,DocUser)values(@DN,@DP,@DS,@DC,@DLN,@DU)", con);
                     cmd.Parameters.AddWithValue("@DN",DName.Text);
                     cmd.Parameters.AddWithValue("@DP", DPass.Text);
-                    cmd.Parameters.AddWithValue("@DPh", DPhone.Text);
+                    cmd.Parameters.AddWithValue("@DS", DSpec.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@DC", DCons.Text);
+                    cmd.Parameters.AddWithValue("@DLN", DLastName.Text);
+                    cmd.Parameters.AddWithValue("@DU", DUser.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Doctor Agregado");
-
                     con.Close();
                     MostrarDoc();
 
@@ -77,7 +94,7 @@ namespace Equipo1_HES
 
         private void AdmConBtn_Click(object sender, EventArgs e)
         {
-            AdmCon cons = new AdmCon();
+            AdmConAdd cons = new AdmConAdd();
             cons.Show();
             this.Hide();
         }
