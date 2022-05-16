@@ -41,5 +41,12 @@ namespace Equipo1_HES
             cerrar.Show();
             this.Hide();
         }
+
+        private void CitaBtn_Click(object sender, EventArgs e)
+        {
+            PacCita FormPacCita = new PacCita();
+            FormPacCita.Show();
+            this.Hide();
+        }
     }
 }

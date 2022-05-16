@@ -24,7 +24,7 @@ namespace Equipo1_HES
 
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
-            if (PName.Text == "" || PPass.Text == "" || PGen.Text == "" || PPhone.Text == "")
+            if (PName.Text == "" || PLastName.Text == "" || PUser.Text == "" || PPass.Text == "" || PGen.Text == "" || PPhone.Text == "" || PDOB.Text == "" || PCI.Text == "")
             {
                 MessageBox.Show("Falta Informacion");
             }
@@ -33,12 +33,16 @@ namespace Equipo1_HES
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into PacienteTbl(PacName,PacPass,PacGen,PacPhone,PacDOB)values(@PN,@PP,@PG,@PPh,@PD)", con);
+                    SqlCommand cmd = new SqlCommand("insert into PacienteTbl(PacName,PacPass,PacGen,PacPhone,PacDOB,PacLastName,PacUser,PacCI)values(@PN,@PP,@PG,@PPh,@PD,@LN,@PU,@PCI)", con);
                     cmd.Parameters.AddWithValue("@PN", PName.Text);
                     cmd.Parameters.AddWithValue("@PP", PPass.Text);
                     cmd.Parameters.AddWithValue("@PG", PGen.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@PPh", PPhone.Text);
                     cmd.Parameters.AddWithValue("@PD", PDOB.Value.Date);
+                    cmd.Parameters.AddWithValue("@LN", PLastName.Text);
+                    cmd.Parameters.AddWithValue("@PU", PUser.Text);
+                    cmd.Parameters.AddWithValue("@PCI", PCI.Text);
+
                     cmd.ExecuteNonQuery();
                     LoginHES login = new LoginHES();
                     login.Show();

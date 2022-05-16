@@ -39,7 +39,7 @@ namespace Equipo1_HES
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.LblName = new System.Windows.Forms.Label();
+            this.LblUser = new System.Windows.Forms.Label();
             this.LblPass = new System.Windows.Forms.Label();
             this.LblSex = new System.Windows.Forms.Label();
             this.LblPhone = new System.Windows.Forms.Label();
@@ -49,6 +49,12 @@ namespace Equipo1_HES
             this.label6 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMin = new System.Windows.Forms.PictureBox();
+            this.LblLastName = new System.Windows.Forms.Label();
+            this.LblName = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.LblCI = new System.Windows.Forms.Label();
+            this.textbox2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -138,18 +144,18 @@ namespace Equipo1_HES
             this.txtType.AutoSize = true;
             this.txtType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtType.ForeColor = System.Drawing.Color.DimGray;
-            this.txtType.Location = new System.Drawing.Point(312, 115);
+            this.txtType.Location = new System.Drawing.Point(338, 131);
             this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(83, 21);
+            this.txtType.Size = new System.Drawing.Size(86, 21);
             this.txtType.TabIndex = 63;
-            this.txtType.Text = "NOMBRE:";
+            this.txtType.Text = "USUARIO:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(269, 145);
+            this.label1.Location = new System.Drawing.Point(298, 161);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 21);
             this.label1.TabIndex = 64;
@@ -160,7 +166,7 @@ namespace Equipo1_HES
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(341, 177);
+            this.label2.Location = new System.Drawing.Point(370, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 21);
             this.label2.TabIndex = 65;
@@ -171,29 +177,29 @@ namespace Equipo1_HES
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(300, 209);
+            this.label3.Location = new System.Drawing.Point(329, 225);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 21);
             this.label3.TabIndex = 66;
             this.label3.Text = "TELEFONO:";
             // 
-            // LblName
+            // LblUser
             // 
-            this.LblName.AutoSize = true;
-            this.LblName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblName.ForeColor = System.Drawing.Color.DimGray;
-            this.LblName.Location = new System.Drawing.Point(401, 115);
-            this.LblName.Name = "LblName";
-            this.LblName.Size = new System.Drawing.Size(59, 21);
-            this.LblName.TabIndex = 67;
-            this.LblName.Text = "NAME";
+            this.LblUser.AutoSize = true;
+            this.LblUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblUser.ForeColor = System.Drawing.Color.DimGray;
+            this.LblUser.Location = new System.Drawing.Point(430, 131);
+            this.LblUser.Name = "LblUser";
+            this.LblUser.Size = new System.Drawing.Size(48, 21);
+            this.LblUser.TabIndex = 67;
+            this.LblUser.Text = "USER";
             // 
             // LblPass
             // 
             this.LblPass.AutoSize = true;
             this.LblPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LblPass.ForeColor = System.Drawing.Color.DimGray;
-            this.LblPass.Location = new System.Drawing.Point(401, 145);
+            this.LblPass.Location = new System.Drawing.Point(430, 161);
             this.LblPass.Name = "LblPass";
             this.LblPass.Size = new System.Drawing.Size(48, 21);
             this.LblPass.TabIndex = 68;
@@ -204,7 +210,7 @@ namespace Equipo1_HES
             this.LblSex.AutoSize = true;
             this.LblSex.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LblSex.ForeColor = System.Drawing.Color.DimGray;
-            this.LblSex.Location = new System.Drawing.Point(401, 177);
+            this.LblSex.Location = new System.Drawing.Point(430, 193);
             this.LblSex.Name = "LblSex";
             this.LblSex.Size = new System.Drawing.Size(50, 21);
             this.LblSex.TabIndex = 69;
@@ -215,7 +221,7 @@ namespace Equipo1_HES
             this.LblPhone.AutoSize = true;
             this.LblPhone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LblPhone.ForeColor = System.Drawing.Color.DimGray;
-            this.LblPhone.Location = new System.Drawing.Point(401, 209);
+            this.LblPhone.Location = new System.Drawing.Point(430, 225);
             this.LblPhone.Name = "LblPhone";
             this.LblPhone.Size = new System.Drawing.Size(65, 21);
             this.LblPhone.TabIndex = 70;
@@ -231,7 +237,7 @@ namespace Equipo1_HES
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(369, 295);
+            this.AddBtn.Location = new System.Drawing.Point(370, 328);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(160, 30);
@@ -245,7 +251,7 @@ namespace Equipo1_HES
             this.LblDOB.AutoSize = true;
             this.LblDOB.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LblDOB.ForeColor = System.Drawing.Color.DimGray;
-            this.LblDOB.Location = new System.Drawing.Point(401, 239);
+            this.LblDOB.Location = new System.Drawing.Point(430, 255);
             this.LblDOB.Name = "LblDOB";
             this.LblDOB.Size = new System.Drawing.Size(45, 21);
             this.LblDOB.TabIndex = 73;
@@ -256,7 +262,7 @@ namespace Equipo1_HES
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(275, 239);
+            this.label5.Location = new System.Drawing.Point(304, 255);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 21);
             this.label5.TabIndex = 72;
@@ -267,7 +273,7 @@ namespace Equipo1_HES
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(332, 51);
+            this.label6.Location = new System.Drawing.Point(341, 28);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(215, 24);
             this.label6.TabIndex = 74;
@@ -295,12 +301,86 @@ namespace Equipo1_HES
             this.btnMin.TabStop = false;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
+            // LblLastName
+            // 
+            this.LblLastName.AutoSize = true;
+            this.LblLastName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblLastName.ForeColor = System.Drawing.Color.DimGray;
+            this.LblLastName.Location = new System.Drawing.Point(430, 101);
+            this.LblLastName.Name = "LblLastName";
+            this.LblLastName.Size = new System.Drawing.Size(95, 21);
+            this.LblLastName.TabIndex = 78;
+            this.LblLastName.Text = "LASTNAME";
+            // 
+            // LblName
+            // 
+            this.LblName.AutoSize = true;
+            this.LblName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblName.ForeColor = System.Drawing.Color.DimGray;
+            this.LblName.Location = new System.Drawing.Point(430, 71);
+            this.LblName.Name = "LblName";
+            this.LblName.Size = new System.Drawing.Size(59, 21);
+            this.LblName.TabIndex = 77;
+            this.LblName.Text = "NAME";
+            this.LblName.Click += new System.EventHandler(this.LblName_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(334, 101);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 21);
+            this.label8.TabIndex = 76;
+            this.label8.Text = "APELLIDO:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(341, 71);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 21);
+            this.label9.TabIndex = 75;
+            this.label9.Text = "NOMBRE:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // LblCI
+            // 
+            this.LblCI.AutoSize = true;
+            this.LblCI.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblCI.ForeColor = System.Drawing.Color.DimGray;
+            this.LblCI.Location = new System.Drawing.Point(430, 287);
+            this.LblCI.Name = "LblCI";
+            this.LblCI.Size = new System.Drawing.Size(28, 21);
+            this.LblCI.TabIndex = 80;
+            this.LblCI.Text = "CI";
+            // 
+            // textbox2
+            // 
+            this.textbox2.AutoSize = true;
+            this.textbox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textbox2.ForeColor = System.Drawing.Color.DimGray;
+            this.textbox2.Location = new System.Drawing.Point(352, 287);
+            this.textbox2.Name = "textbox2";
+            this.textbox2.Size = new System.Drawing.Size(72, 21);
+            this.textbox2.TabIndex = 79;
+            this.textbox2.Text = "NRO CI:";
+            // 
             // PacProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(680, 380);
+            this.Controls.Add(this.LblCI);
+            this.Controls.Add(this.textbox2);
+            this.Controls.Add(this.LblLastName);
+            this.Controls.Add(this.LblName);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnMin);
@@ -310,7 +390,7 @@ namespace Equipo1_HES
             this.Controls.Add(this.LblPhone);
             this.Controls.Add(this.LblSex);
             this.Controls.Add(this.LblPass);
-            this.Controls.Add(this.LblName);
+            this.Controls.Add(this.LblUser);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -341,7 +421,7 @@ namespace Equipo1_HES
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label LblName;
+        private System.Windows.Forms.Label LblUser;
         private System.Windows.Forms.Label LblPass;
         private System.Windows.Forms.Label LblSex;
         private System.Windows.Forms.Label LblPhone;
@@ -351,5 +431,11 @@ namespace Equipo1_HES
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMin;
+        private System.Windows.Forms.Label LblLastName;
+        private System.Windows.Forms.Label LblName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label LblCI;
+        private System.Windows.Forms.Label textbox2;
     }
 }

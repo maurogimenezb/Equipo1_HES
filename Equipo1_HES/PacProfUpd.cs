@@ -30,13 +30,15 @@ namespace Equipo1_HES
 
             if (datos.Read() == true)
             {
-
                 PacLogged.name = datos["PacName"].ToString();
+                PacLogged.lastname = datos["PacLastName"].ToString();
+                PacLogged.user = datos["PacUser"].ToString();
                 PacLogged.pass = datos["PacPass"].ToString();
-                PacLogged.sexo = datos["PacGen"].ToString();
+                PacLogged.gen = datos["PacGen"].ToString();
                 PacLogged.phone = datos["PacPhone"].ToString();
-                PacLogged.nac = datos["PacDOB"].ToString();
+                PacLogged.dob = datos["PacDOB"].ToString();
                 PacLogged.id = datos["PacId"].ToString();
+                PacLogged.ci = datos["PacCI"].ToString();
 
 
             }
@@ -54,11 +56,15 @@ namespace Equipo1_HES
         private void HomePac_Load(object sender, EventArgs e)
         {
             TxtName.Text = PacLogged.name;
+            TxtLastName.Text = PacLogged.lastname;
+            TxtUser.Text = PacLogged.user;
             TxtPass.Text = PacLogged.pass;
-            ComBoxGen.Text = PacLogged.sexo;
+            ComBoxGen.Text = PacLogged.gen;
             TxtPhone.Text = PacLogged.phone;
-            DataTimeDOB.Text = PacLogged.nac;
+            DataTimeDOB.Text = PacLogged.dob;
             TxtId.Text = PacLogged.id;
+            TxtCI.Text = PacLogged.ci;
+
 
         }
 
@@ -71,13 +77,29 @@ namespace Equipo1_HES
 
         private void UpdBtn_Click(object sender, EventArgs e)
         {
-            con.Open();
-            string query = "update PacienteTbl set PacName= '" + TxtName.Text + "', PacPass= '" + TxtPass.Text + "' where PacId= " + TxtId.Text + "";
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Se ha modificado paciente");
-            con.Close();
-            ActPac();
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("update PacienteTbl set PacName=@PN,PacPass=@PP,PacGen=@PG,PacPhone=@PPh,PacDOB=@PD,PacLastName=@PLN,PacUser=@PU,PacCI=@PCI where PacId=@key", con);
+                cmd.Parameters.AddWithValue("@PN", TxtName.Text);
+                cmd.Parameters.AddWithValue("@PP", TxtPass.Text);
+                cmd.Parameters.AddWithValue("@PG", ComBoxGen.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@PPh", TxtPhone.Text);
+                cmd.Parameters.AddWithValue("@PD", DataTimeDOB.Value.Date);
+                cmd.Parameters.AddWithValue("@PLN", TxtLastName.Text);
+                cmd.Parameters.AddWithValue("@PU", TxtUser.Text);
+                cmd.Parameters.AddWithValue("@PCI", TxtCI.Text);
+                cmd.Parameters.AddWithValue("@key", TxtId.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Perfil Modificado");
+
+                con.Close();
+                ActPac();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
         }
 
         private void AtrBtn_Click(object sender, EventArgs e)

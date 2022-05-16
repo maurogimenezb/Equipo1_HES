@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace Equipo1_HES
 {
-    class PacLogged
+    class DocLogged
     {
         static string Name;
         static string LastName;
         static string User;
         static string Pass;
-        static string Gen;
-        static string Phone;
-        static string DOB;
         static string Id;
-        static string CI;
-
+        static string Spec;
+        static string Cons;
+        static string Disp;
 
 
         public static string name
@@ -32,6 +30,7 @@ namespace Equipo1_HES
                 Name = value;
             }
         }
+
         public static string lastname
         {
             get
@@ -44,6 +43,7 @@ namespace Equipo1_HES
                 LastName = value;
             }
         }
+
         public static string user
         {
             get
@@ -56,6 +56,7 @@ namespace Equipo1_HES
                 User = value;
             }
         }
+
         public static string pass
         {
             get
@@ -69,43 +70,6 @@ namespace Equipo1_HES
             }
         }
 
-        public static string gen
-        {
-            get
-            {
-                return Gen;
-            }
-
-            set
-            {
-                Gen = value;
-            }
-        }
-
-        public static string phone
-        {
-            get
-            {
-                return Phone;
-            }
-
-            set
-            {
-                Phone = value;
-            }
-        }
-        public static string dob
-        {
-            get
-            {
-                return DOB;
-            }
-
-            set
-            {
-                DOB = value;
-            }
-        }
         public static string id
         {
             get
@@ -118,16 +82,40 @@ namespace Equipo1_HES
                 Id = value;
             }
         }
-        public static string ci
+        public static string spec
         {
             get
             {
-                return CI;
+                return Spec;
             }
 
             set
             {
-                CI = value;
+                Spec = value;
+            }
+        }
+        public static string cons
+        {
+            get
+            {
+                return Cons;
+            }
+
+            set
+            {
+                Cons = value;
+            }
+        }
+        public static string disp
+        {
+            get
+            {
+                return Disp;
+            }
+
+            set
+            {
+                Disp = value;
             }
         }
     }

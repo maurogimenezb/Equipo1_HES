@@ -31,7 +31,7 @@ namespace Equipo1_HES
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterHES));
             this.PPass = new System.Windows.Forms.TextBox();
-            this.PName = new System.Windows.Forms.TextBox();
+            this.PUser = new System.Windows.Forms.TextBox();
             this.txtType = new System.Windows.Forms.Label();
             this.PGen = new System.Windows.Forms.ComboBox();
             this.txtPass = new System.Windows.Forms.Label();
@@ -50,6 +50,15 @@ namespace Equipo1_HES
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.PLastName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.PName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.PCI = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             this.panel1.SuspendLayout();
@@ -60,26 +69,26 @@ namespace Equipo1_HES
             // 
             this.PPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PPass.Location = new System.Drawing.Point(424, 152);
+            this.PPass.Location = new System.Drawing.Point(423, 159);
             this.PPass.Name = "PPass";
             this.PPass.Size = new System.Drawing.Size(121, 16);
             this.PPass.TabIndex = 37;
             // 
-            // PName
+            // PUser
             // 
-            this.PName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PName.Location = new System.Drawing.Point(424, 118);
-            this.PName.Name = "PName";
-            this.PName.Size = new System.Drawing.Size(121, 16);
-            this.PName.TabIndex = 36;
+            this.PUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PUser.Location = new System.Drawing.Point(423, 125);
+            this.PUser.Name = "PUser";
+            this.PUser.Size = new System.Drawing.Size(121, 16);
+            this.PUser.TabIndex = 36;
             // 
             // txtType
             // 
             this.txtType.AutoSize = true;
             this.txtType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtType.ForeColor = System.Drawing.Color.DimGray;
-            this.txtType.Location = new System.Drawing.Point(336, 116);
+            this.txtType.Location = new System.Drawing.Point(335, 123);
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(86, 21);
             this.txtType.TabIndex = 35;
@@ -94,7 +103,7 @@ namespace Equipo1_HES
             this.PGen.Items.AddRange(new object[] {
             "Femenino",
             "Masculino"});
-            this.PGen.Location = new System.Drawing.Point(424, 183);
+            this.PGen.Location = new System.Drawing.Point(423, 190);
             this.PGen.Name = "PGen";
             this.PGen.Size = new System.Drawing.Size(121, 25);
             this.PGen.TabIndex = 34;
@@ -104,7 +113,7 @@ namespace Equipo1_HES
             this.txtPass.AutoSize = true;
             this.txtPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPass.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPass.Location = new System.Drawing.Point(336, 181);
+            this.txtPass.Location = new System.Drawing.Point(335, 188);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(82, 21);
             this.txtPass.TabIndex = 33;
@@ -115,7 +124,7 @@ namespace Equipo1_HES
             this.txtUsers.AutoSize = true;
             this.txtUsers.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUsers.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsers.Location = new System.Drawing.Point(296, 146);
+            this.txtUsers.Location = new System.Drawing.Point(295, 153);
             this.txtUsers.Name = "txtUsers";
             this.txtUsers.Size = new System.Drawing.Size(126, 21);
             this.txtUsers.TabIndex = 32;
@@ -151,7 +160,7 @@ namespace Equipo1_HES
             this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RegisterBtn.ForeColor = System.Drawing.Color.White;
-            this.RegisterBtn.Location = new System.Drawing.Point(397, 305);
+            this.RegisterBtn.Location = new System.Drawing.Point(397, 330);
             this.RegisterBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(100, 30);
@@ -204,7 +213,7 @@ namespace Equipo1_HES
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(353, 58);
+            this.label2.Location = new System.Drawing.Point(346, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(199, 22);
             this.label2.TabIndex = 38;
@@ -215,7 +224,7 @@ namespace Equipo1_HES
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(323, 219);
+            this.label3.Location = new System.Drawing.Point(322, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 21);
             this.label3.TabIndex = 39;
@@ -225,7 +234,7 @@ namespace Equipo1_HES
             // 
             this.PPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PPhone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PPhone.Location = new System.Drawing.Point(424, 221);
+            this.PPhone.Location = new System.Drawing.Point(423, 228);
             this.PPhone.Name = "PPhone";
             this.PPhone.Size = new System.Drawing.Size(121, 16);
             this.PPhone.TabIndex = 40;
@@ -235,7 +244,7 @@ namespace Equipo1_HES
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(296, 251);
+            this.label4.Location = new System.Drawing.Point(295, 258);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 21);
             this.label4.TabIndex = 41;
@@ -247,7 +256,7 @@ namespace Equipo1_HES
             this.PDOB.CalendarMonthBackground = System.Drawing.Color.White;
             this.PDOB.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.PDOB.Location = new System.Drawing.Point(424, 251);
+            this.PDOB.Location = new System.Drawing.Point(423, 258);
             this.PDOB.Name = "PDOB";
             this.PDOB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PDOB.ShowCheckBox = true;
@@ -258,7 +267,7 @@ namespace Equipo1_HES
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(424, 136);
+            this.panel2.Location = new System.Drawing.Point(423, 143);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(121, 1);
             this.panel2.TabIndex = 94;
@@ -266,7 +275,7 @@ namespace Equipo1_HES
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel3.Location = new System.Drawing.Point(424, 170);
+            this.panel3.Location = new System.Drawing.Point(423, 177);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(121, 1);
             this.panel3.TabIndex = 95;
@@ -274,10 +283,94 @@ namespace Equipo1_HES
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel4.Location = new System.Drawing.Point(424, 239);
+            this.panel4.Location = new System.Drawing.Point(423, 246);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(121, 1);
             this.panel4.TabIndex = 96;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel5.Location = new System.Drawing.Point(423, 112);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(121, 1);
+            this.panel5.TabIndex = 99;
+            // 
+            // PLastName
+            // 
+            this.PLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PLastName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PLastName.Location = new System.Drawing.Point(423, 94);
+            this.PLastName.Name = "PLastName";
+            this.PLastName.Size = new System.Drawing.Size(121, 16);
+            this.PLastName.TabIndex = 98;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(331, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 21);
+            this.label1.TabIndex = 97;
+            this.label1.Text = "APELLIDO:";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel6.Location = new System.Drawing.Point(423, 82);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(121, 1);
+            this.panel6.TabIndex = 102;
+            // 
+            // PName
+            // 
+            this.PName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PName.Location = new System.Drawing.Point(423, 64);
+            this.PName.Name = "PName";
+            this.PName.Size = new System.Drawing.Size(121, 16);
+            this.PName.TabIndex = 101;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(335, 62);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 21);
+            this.label5.TabIndex = 100;
+            this.label5.Text = "NOMBRE:";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel7.Location = new System.Drawing.Point(417, 309);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(121, 1);
+            this.panel7.TabIndex = 105;
+            // 
+            // PCI
+            // 
+            this.PCI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PCI.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PCI.Location = new System.Drawing.Point(417, 291);
+            this.PCI.Name = "PCI";
+            this.PCI.Size = new System.Drawing.Size(121, 16);
+            this.PCI.TabIndex = 104;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(343, 289);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 21);
+            this.label6.TabIndex = 103;
+            this.label6.Text = "CI NRO:";
             // 
             // RegisterHES
             // 
@@ -285,6 +378,15 @@ namespace Equipo1_HES
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(680, 380);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.PCI);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.PName);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.PLastName);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -294,7 +396,7 @@ namespace Equipo1_HES
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.PPass);
-            this.Controls.Add(this.PName);
+            this.Controls.Add(this.PUser);
             this.Controls.Add(this.txtType);
             this.Controls.Add(this.PGen);
             this.Controls.Add(this.txtPass);
@@ -319,7 +421,7 @@ namespace Equipo1_HES
         #endregion
 
         private System.Windows.Forms.TextBox PPass;
-        private System.Windows.Forms.TextBox PName;
+        private System.Windows.Forms.TextBox PUser;
         private System.Windows.Forms.Label txtType;
         private System.Windows.Forms.ComboBox PGen;
         private System.Windows.Forms.Label txtPass;
@@ -338,5 +440,14 @@ namespace Equipo1_HES
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox PLastName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox PName;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox PCI;
+        private System.Windows.Forms.Label label6;
     }
 }

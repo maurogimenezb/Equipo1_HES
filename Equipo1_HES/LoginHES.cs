@@ -56,42 +56,45 @@ namespace Equipo1_HES
                 {
                     MessageBox.Show("Ingrese un usuario y contraseña");
                 }
-                else 
+                else
                 {
                     con.Open();
-                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from DoctorTbl where DocName='"+LoginUser.Text+"' and DocPass='"+LoginPass.Text+"'", con);
+                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from DoctorTbl where DocUser='" + LoginUser.Text + "' and DocPass='" + LoginPass.Text + "'", con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
                     if (dt.Rows[0][0].ToString() == "1")
                     {
-                        /*string query;
-                        query = "Select * from DoctorTbl where DocName='"+LoginUser+ "' and DocPass='" + LoginPass + "' ";
-                        SqlCommand conx = new SqlCommand(query, con);
-                        SqlDataReader drLogin;
-                        con.Open();
-                        drLogin = conx.ExecuteReader();
+                        HomeDoc DocHome = new HomeDoc();
+                        //PacUpd paciente = new PacUpd();
+                        DocHome.Show();
+                        //Para mostrar en los TextBox
+                        SqlCommand leer = new SqlCommand("Select * from DoctorTbl where DocUser='" + LoginUser.Text + "'", con);
+                        SqlDataReader datos = leer.ExecuteReader();
 
-                        if(drLogin.Read())
+                        if (datos.Read() == true)
                         {
-                            LoggedInUser.User = drLogin["DocName"].ToString();
-                           // LoggedInUser.UserName = drLogin[""].ToString()+" "+drLogin[];
+                            DocLogged.name = datos["DocName"].ToString();
+                            DocLogged.lastname = datos["DocLastName"].ToString();
+                            DocLogged.pass = datos["DocPass"].ToString();
+                            DocLogged.spec = datos["DocSpec"].ToString();
+                            DocLogged.cons = datos["DocCon"].ToString();
+                            DocLogged.user = datos["DocUser"].ToString();
+                            DocLogged.id = datos["DocId"].ToString();
+                            DocLogged.disp = datos["DocDisp"].ToString();
 
-                            drLogin.Close();
-                            conx.Dispose();
-                            con.Close();
-                        
 
-                        }*/
-                        HomeDoc doctor = new HomeDoc();
-                        doctor.Show();
+                        }
+                        datos.Close();
+                        //Termina para mostrar TextBox
+
                         this.Hide();
-
                     }
                     else
                     {
                         MessageBox.Show("Doctor no encontrado");
                     }
                     con.Close();
+
                 }
 
             } else
@@ -122,11 +125,15 @@ namespace Equipo1_HES
                              paciente.textSexo.Text = datos["PacGen"].ToString();
                              paciente.textTelefono.Text = datos["PacPhone"].ToString(); */
                             PacLogged.name = datos["PacName"].ToString();
+                            PacLogged.lastname = datos["PacLastName"].ToString();
+                            PacLogged.user = datos["PacUser"].ToString();
                             PacLogged.pass = datos["PacPass"].ToString();
-                            PacLogged.sexo = datos["PacGen"].ToString();
+                            PacLogged.gen = datos["PacGen"].ToString();
                             PacLogged.phone = datos["PacPhone"].ToString();
-                            PacLogged.nac = datos["PacDOB"].ToString();
+                            PacLogged.dob = datos["PacDOB"].ToString();
                             PacLogged.id = datos["PacId"].ToString();
+                            PacLogged.ci = datos["PacCI"].ToString();
+
 
 
                         }

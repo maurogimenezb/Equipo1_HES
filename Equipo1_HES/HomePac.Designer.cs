@@ -31,6 +31,7 @@ namespace Equipo1_HES
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePac));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CitaBtn = new System.Windows.Forms.Button();
             this.CerrarBtn = new System.Windows.Forms.Button();
             this.AdmHomeBtn = new System.Windows.Forms.Button();
             this.AdmDocBtn = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@ namespace Equipo1_HES
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.CitaBtn);
             this.panel1.Controls.Add(this.CerrarBtn);
             this.panel1.Controls.Add(this.AdmHomeBtn);
             this.panel1.Controls.Add(this.AdmDocBtn);
@@ -54,6 +56,25 @@ namespace Equipo1_HES
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 380);
             this.panel1.TabIndex = 41;
+            // 
+            // CitaBtn
+            // 
+            this.CitaBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CitaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CitaBtn.BackgroundImage")));
+            this.CitaBtn.FlatAppearance.BorderSize = 0;
+            this.CitaBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.CitaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.CitaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CitaBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CitaBtn.ForeColor = System.Drawing.Color.Black;
+            this.CitaBtn.Location = new System.Drawing.Point(31, 220);
+            this.CitaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CitaBtn.Name = "CitaBtn";
+            this.CitaBtn.Size = new System.Drawing.Size(159, 30);
+            this.CitaBtn.TabIndex = 39;
+            this.CitaBtn.Text = "Reservar Cita";
+            this.CitaBtn.UseVisualStyleBackColor = false;
+            this.CitaBtn.Click += new System.EventHandler(this.CitaBtn_Click);
             // 
             // CerrarBtn
             // 
@@ -172,5 +193,6 @@ namespace Equipo1_HES
         private System.Windows.Forms.Button AdmDocBtn;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMin;
+        private System.Windows.Forms.Button CitaBtn;
     }
 }

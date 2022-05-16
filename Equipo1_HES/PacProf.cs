@@ -27,10 +27,14 @@ namespace Equipo1_HES
         private void PacProf_Load(object sender, EventArgs e)
         {
             LblName.Text = PacLogged.name;
+            LblLastName.Text = PacLogged.lastname;
+            LblUser.Text = PacLogged.user;
             LblPass.Text = PacLogged.pass;
-            LblSex.Text = PacLogged.sexo;
+            LblSex.Text = PacLogged.gen;
             LblPhone.Text = PacLogged.phone;
-            LblDOB.Text = PacLogged.nac;
+            LblDOB.Text = PacLogged.dob;
+            LblCI.Text = PacLogged.ci;
+
 
         }
 
@@ -63,6 +67,16 @@ namespace Equipo1_HES
         private void btnMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void LblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
