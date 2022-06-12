@@ -34,7 +34,7 @@ namespace Equipo1_HES
             this.ModBtn = new System.Windows.Forms.Button();
             this.DelBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
-            this.AdmDocDGV = new System.Windows.Forms.DataGridView();
+            this.AdmCita = new System.Windows.Forms.DataGridView();
             this.DocId = new System.Windows.Forms.TextBox();
             this.txtType = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,7 +46,7 @@ namespace Equipo1_HES
             this.AdmConBtn = new System.Windows.Forms.Button();
             this.AdmDocBtn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.AdmDocDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdmCita)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -69,7 +69,7 @@ namespace Equipo1_HES
             this.ModBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ModBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ModBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ModBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ModBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ModBtn.ForeColor = System.Drawing.Color.White;
             this.ModBtn.Location = new System.Drawing.Point(283, 189);
             this.ModBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -87,7 +87,7 @@ namespace Equipo1_HES
             this.DelBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.DelBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.DelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DelBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DelBtn.ForeColor = System.Drawing.Color.White;
             this.DelBtn.Location = new System.Drawing.Point(528, 110);
             this.DelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -106,7 +106,7 @@ namespace Equipo1_HES
             this.AddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
             this.AddBtn.Location = new System.Drawing.Point(467, 189);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -116,16 +116,16 @@ namespace Equipo1_HES
             this.AddBtn.Text = "Agregar Doctor";
             this.AddBtn.UseVisualStyleBackColor = false;
             // 
-            // AdmDocDGV
+            // AdmCita
             // 
-            this.AdmDocDGV.BackgroundColor = System.Drawing.Color.White;
-            this.AdmDocDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdmDocDGV.GridColor = System.Drawing.Color.White;
-            this.AdmDocDGV.Location = new System.Drawing.Point(253, 235);
-            this.AdmDocDGV.Name = "AdmDocDGV";
-            this.AdmDocDGV.RowTemplate.Height = 25;
-            this.AdmDocDGV.Size = new System.Drawing.Size(401, 133);
-            this.AdmDocDGV.TabIndex = 83;
+            this.AdmCita.BackgroundColor = System.Drawing.Color.White;
+            this.AdmCita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AdmCita.GridColor = System.Drawing.Color.White;
+            this.AdmCita.Location = new System.Drawing.Point(253, 235);
+            this.AdmCita.Name = "AdmCita";
+            this.AdmCita.RowTemplate.Height = 25;
+            this.AdmCita.Size = new System.Drawing.Size(401, 133);
+            this.AdmCita.TabIndex = 83;
             // 
             // DocId
             // 
@@ -138,11 +138,11 @@ namespace Equipo1_HES
             // txtType
             // 
             this.txtType.AutoSize = true;
-            this.txtType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtType.ForeColor = System.Drawing.Color.DimGray;
             this.txtType.Location = new System.Drawing.Point(303, 113);
             this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(151, 21);
+            this.txtType.Size = new System.Drawing.Size(150, 20);
             this.txtType.TabIndex = 78;
             this.txtType.Text = "ID CONSULTORIO:";
             // 
@@ -169,10 +169,10 @@ namespace Equipo1_HES
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(341, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 21);
+            this.label1.Size = new System.Drawing.Size(215, 20);
             this.label1.TabIndex = 75;
             this.label1.Text = "ADMINISTRAR DOCTORES";
             // 
@@ -197,7 +197,7 @@ namespace Equipo1_HES
             this.CerrarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.CerrarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.CerrarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CerrarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CerrarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CerrarBtn.ForeColor = System.Drawing.Color.Black;
             this.CerrarBtn.Location = new System.Drawing.Point(31, 340);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -215,7 +215,7 @@ namespace Equipo1_HES
             this.AdmHomeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AdmHomeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AdmHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdmHomeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdmHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmHomeBtn.ForeColor = System.Drawing.Color.Black;
             this.AdmHomeBtn.Location = new System.Drawing.Point(31, 136);
             this.AdmHomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -233,7 +233,7 @@ namespace Equipo1_HES
             this.AdmConBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AdmConBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.AdmConBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdmConBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdmConBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmConBtn.ForeColor = System.Drawing.Color.Black;
             this.AdmConBtn.Location = new System.Drawing.Point(31, 219);
             this.AdmConBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -251,7 +251,7 @@ namespace Equipo1_HES
             this.AdmDocBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AdmDocBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.AdmDocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdmDocBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdmDocBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmDocBtn.ForeColor = System.Drawing.Color.Black;
             this.AdmDocBtn.Location = new System.Drawing.Point(31, 177);
             this.AdmDocBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -280,7 +280,7 @@ namespace Equipo1_HES
             this.Controls.Add(this.ModBtn);
             this.Controls.Add(this.DelBtn);
             this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.AdmDocDGV);
+            this.Controls.Add(this.AdmCita);
             this.Controls.Add(this.DocId);
             this.Controls.Add(this.txtType);
             this.Controls.Add(this.pictureBox1);
@@ -291,7 +291,7 @@ namespace Equipo1_HES
             this.Name = "AdmConDel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmConDel";
-            ((System.ComponentModel.ISupportInitialize)(this.AdmDocDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdmCita)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -307,7 +307,7 @@ namespace Equipo1_HES
         private System.Windows.Forms.Button ModBtn;
         private System.Windows.Forms.Button DelBtn;
         private System.Windows.Forms.Button AddBtn;
-        private System.Windows.Forms.DataGridView AdmDocDGV;
+        private System.Windows.Forms.DataGridView AdmCita;
         private System.Windows.Forms.TextBox DocId;
         private System.Windows.Forms.Label txtType;
         private System.Windows.Forms.PictureBox pictureBox1;

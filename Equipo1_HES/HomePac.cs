@@ -48,5 +48,19 @@ namespace Equipo1_HES
             FormPacCita.Show();
             this.Hide();
         }
+
+        private void EliminarBtn_Click(object sender, EventArgs e)
+        {
+            PacCitaElim FormPacCitaElim = new PacCitaElim();
+            FormPacCitaElim.Show();
+            this.Hide();
+        }
+
+        private void ModificarBtn_Click(object sender, EventArgs e)
+        {
+            PacCitaEdit ModicicarCita = new PacCitaEdit();
+            ModicicarCita.Show();
+            this.Hide();
+        }
     }
 }

@@ -45,12 +45,22 @@ namespace Equipo1_HES
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SpecCombo = new System.Windows.Forms.ComboBox();
-            this.DocCombo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.LblNombre = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.LblApellido = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.AdmCon = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CBoxFecha = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CBoxHo = new System.Windows.Forms.ComboBox();
+            this.DocCombo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdmCon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,6 +75,7 @@ namespace Equipo1_HES
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 380);
             this.panel1.TabIndex = 42;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // CitaBtn
             // 
@@ -74,7 +85,7 @@ namespace Equipo1_HES
             this.CitaBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.CitaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.CitaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CitaBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CitaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CitaBtn.ForeColor = System.Drawing.Color.Black;
             this.CitaBtn.Location = new System.Drawing.Point(31, 220);
             this.CitaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -92,7 +103,7 @@ namespace Equipo1_HES
             this.CerrarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.CerrarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.CerrarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CerrarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CerrarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CerrarBtn.ForeColor = System.Drawing.Color.Black;
             this.CerrarBtn.Location = new System.Drawing.Point(31, 340);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -110,7 +121,7 @@ namespace Equipo1_HES
             this.AdmHomeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AdmHomeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AdmHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdmHomeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdmHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmHomeBtn.ForeColor = System.Drawing.Color.Black;
             this.AdmHomeBtn.Location = new System.Drawing.Point(31, 136);
             this.AdmHomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -128,7 +139,7 @@ namespace Equipo1_HES
             this.AdmDocBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AdmDocBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AdmDocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdmDocBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdmDocBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmDocBtn.ForeColor = System.Drawing.Color.Black;
             this.AdmDocBtn.Location = new System.Drawing.Point(31, 177);
             this.AdmDocBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -150,10 +161,10 @@ namespace Equipo1_HES
             // RegLbl
             // 
             this.RegLbl.AutoSize = true;
-            this.RegLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RegLbl.Location = new System.Drawing.Point(439, 275);
+            this.RegLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RegLbl.Location = new System.Drawing.Point(281, 356);
             this.RegLbl.Name = "RegLbl";
-            this.RegLbl.Size = new System.Drawing.Size(143, 22);
+            this.RegLbl.Size = new System.Drawing.Size(151, 24);
             this.RegLbl.TabIndex = 120;
             this.RegLbl.Text = "¡SIN REGISTRO!";
             this.RegLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,10 +172,10 @@ namespace Equipo1_HES
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(270, 274);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(228, 347);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 22);
+            this.label2.Size = new System.Drawing.Size(158, 24);
             this.label2.TabIndex = 119;
             this.label2.Text = "DISPONIBILIDAD:";
             // 
@@ -172,7 +183,7 @@ namespace Equipo1_HES
             // 
             this.DocId.Location = new System.Drawing.Point(225, 15);
             this.DocId.Name = "DocId";
-            this.DocId.Size = new System.Drawing.Size(37, 23);
+            this.DocId.Size = new System.Drawing.Size(66, 23);
             this.DocId.TabIndex = 118;
             this.DocId.Visible = false;
             // 
@@ -184,34 +195,35 @@ namespace Equipo1_HES
             this.AddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(532, 140);
+            this.AddBtn.Location = new System.Drawing.Point(519, 339);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(100, 30);
             this.AddBtn.TabIndex = 116;
             this.AddBtn.Text = "Agregar";
             this.AddBtn.UseVisualStyleBackColor = false;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // txtType
             // 
             this.txtType.AutoSize = true;
-            this.txtType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtType.ForeColor = System.Drawing.Color.DimGray;
-            this.txtType.Location = new System.Drawing.Point(246, 121);
+            this.txtType.Location = new System.Drawing.Point(228, 85);
             this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(129, 21);
+            this.txtType.Size = new System.Drawing.Size(132, 20);
             this.txtType.TabIndex = 115;
             this.txtType.Text = "ESPECIALIDAD:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(315, 56);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(303, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 21);
+            this.label1.Size = new System.Drawing.Size(252, 20);
             this.label1.TabIndex = 114;
             this.label1.Text = "ADMINISTRAR CONSULTORIOS";
             // 
@@ -242,30 +254,127 @@ namespace Equipo1_HES
             "Medicina General",
             "Odontologia",
             "Psicologia"});
-            this.SpecCombo.Location = new System.Drawing.Point(381, 121);
+            this.SpecCombo.Location = new System.Drawing.Point(366, 85);
             this.SpecCombo.Name = "SpecCombo";
             this.SpecCombo.Size = new System.Drawing.Size(121, 23);
             this.SpecCombo.TabIndex = 121;
+            this.SpecCombo.SelectedIndexChanged += new System.EventHandler(this.SpecCombo_SelectedIndexChanged);
             this.SpecCombo.SelectionChangeCommitted += new System.EventHandler(this.SpecCombo_SelectionChangeCommitted);
-            // 
-            // DocCombo
-            // 
-            this.DocCombo.FormattingEnabled = true;
-            this.DocCombo.Location = new System.Drawing.Point(381, 161);
-            this.DocCombo.Name = "DocCombo";
-            this.DocCombo.Size = new System.Drawing.Size(121, 23);
-            this.DocCombo.TabIndex = 123;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(246, 161);
+            this.label3.Location = new System.Drawing.Point(228, 125);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 21);
+            this.label3.Size = new System.Drawing.Size(146, 20);
             this.label3.TabIndex = 122;
-            this.label3.Text = "ESPECIALIDAD:";
+            this.label3.Text = "Nombre del Doctor:";
+            // 
+            // LblNombre
+            // 
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.LblNombre.Location = new System.Drawing.Point(317, 51);
+            this.LblNombre.Name = "LblNombre";
+            this.LblNombre.Size = new System.Drawing.Size(55, 20);
+            this.LblNombre.TabIndex = 124;
+            this.LblNombre.Text = "NAME";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(228, 51);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 20);
+            this.label9.TabIndex = 125;
+            this.label9.Text = "NOMBRE:";
+            // 
+            // LblApellido
+            // 
+            this.LblApellido.AutoSize = true;
+            this.LblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblApellido.ForeColor = System.Drawing.Color.DimGray;
+            this.LblApellido.Location = new System.Drawing.Point(517, 51);
+            this.LblApellido.Name = "LblApellido";
+            this.LblApellido.Size = new System.Drawing.Size(95, 20);
+            this.LblApellido.TabIndex = 126;
+            this.LblApellido.Text = "LASTNAME";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(419, 51);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 20);
+            this.label8.TabIndex = 127;
+            this.label8.Text = "APELLIDO:";
+            // 
+            // AdmCon
+            // 
+            this.AdmCon.BackgroundColor = System.Drawing.Color.White;
+            this.AdmCon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AdmCon.GridColor = System.Drawing.Color.White;
+            this.AdmCon.Location = new System.Drawing.Point(244, 220);
+            this.AdmCon.Name = "AdmCon";
+            this.AdmCon.RowTemplate.Height = 25;
+            this.AdmCon.Size = new System.Drawing.Size(401, 114);
+            this.AdmCon.TabIndex = 128;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(225, 187);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 20);
+            this.label5.TabIndex = 130;
+            this.label5.Text = "Fecha disponible:";
+            // 
+            // CBoxFecha
+            // 
+            this.CBoxFecha.FormattingEnabled = true;
+            this.CBoxFecha.Location = new System.Drawing.Point(354, 184);
+            this.CBoxFecha.Name = "CBoxFecha";
+            this.CBoxFecha.Size = new System.Drawing.Size(104, 23);
+            this.CBoxFecha.TabIndex = 131;
+            this.CBoxFecha.SelectedIndexChanged += new System.EventHandler(this.CBoxFecha_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(464, 187);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 20);
+            this.label4.TabIndex = 133;
+            this.label4.Text = "Hora de Consulta:";
+            // 
+            // CBoxHo
+            // 
+            this.CBoxHo.FormattingEnabled = true;
+            this.CBoxHo.Location = new System.Drawing.Point(607, 184);
+            this.CBoxHo.Name = "CBoxHo";
+            this.CBoxHo.Size = new System.Drawing.Size(68, 23);
+            this.CBoxHo.TabIndex = 134;
+            this.CBoxHo.SelectedIndexChanged += new System.EventHandler(this.CBoxHo_SelectedIndexChanged);
+            // 
+            // DocCombo
+            // 
+            this.DocCombo.FormattingEnabled = true;
+            this.DocCombo.Location = new System.Drawing.Point(380, 125);
+            this.DocCombo.Name = "DocCombo";
+            this.DocCombo.Size = new System.Drawing.Size(98, 23);
+            this.DocCombo.TabIndex = 135;
+            this.DocCombo.SelectedIndexChanged += new System.EventHandler(this.DocCombo_SelectedIndexChanged);
             // 
             // PacCita
             // 
@@ -274,6 +383,15 @@ namespace Equipo1_HES
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(680, 380);
             this.Controls.Add(this.DocCombo);
+            this.Controls.Add(this.CBoxHo);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.CBoxFecha);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.AdmCon);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.LblApellido);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.LblNombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SpecCombo);
             this.Controls.Add(this.RegLbl);
@@ -293,6 +411,7 @@ namespace Equipo1_HES
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdmCon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,7 +434,16 @@ namespace Equipo1_HES
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox SpecCombo;
-        private System.Windows.Forms.ComboBox DocCombo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblNombre;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label LblApellido;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView AdmCon;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox CBoxFecha;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox CBoxHo;
+        private System.Windows.Forms.ComboBox DocCombo;
     }
 }

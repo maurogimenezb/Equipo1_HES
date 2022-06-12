@@ -20,7 +20,7 @@ namespace Equipo1_HES
             MostrarCons();
         }
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO HES\Base de Datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Nelson\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
         private void MostrarCons()
         {
             con.Open();
@@ -29,7 +29,7 @@ namespace Equipo1_HES
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet(); //Colecciona n numeros de DataTables
             sda.Fill(ds);
-            AdmDocDGV.DataSource = ds.Tables[0];
+            AdmCita.DataSource = ds.Tables[0];
             con.Close();
         }
 
