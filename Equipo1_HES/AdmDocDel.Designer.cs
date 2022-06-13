@@ -191,7 +191,7 @@ namespace Equipo1_HES
             this.CerrarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarBtn.BackgroundImage")));
             this.CerrarBtn.FlatAppearance.BorderSize = 0;
             this.CerrarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.CerrarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.CerrarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.CerrarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CerrarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CerrarBtn.ForeColor = System.Drawing.Color.Black;
@@ -214,13 +214,14 @@ namespace Equipo1_HES
             this.AdmHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdmHomeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmHomeBtn.ForeColor = System.Drawing.Color.Black;
-            this.AdmHomeBtn.Location = new System.Drawing.Point(31, 136);
+            this.AdmHomeBtn.Location = new System.Drawing.Point(31, 268);
             this.AdmHomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmHomeBtn.Name = "AdmHomeBtn";
             this.AdmHomeBtn.Size = new System.Drawing.Size(159, 30);
             this.AdmHomeBtn.TabIndex = 37;
             this.AdmHomeBtn.Text = "Inicio";
             this.AdmHomeBtn.UseVisualStyleBackColor = false;
+            this.AdmHomeBtn.Visible = false;
             // 
             // AdmConBtn
             // 
@@ -232,13 +233,14 @@ namespace Equipo1_HES
             this.AdmConBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdmConBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmConBtn.ForeColor = System.Drawing.Color.Black;
-            this.AdmConBtn.Location = new System.Drawing.Point(31, 219);
+            this.AdmConBtn.Location = new System.Drawing.Point(31, 173);
             this.AdmConBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmConBtn.Name = "AdmConBtn";
             this.AdmConBtn.Size = new System.Drawing.Size(159, 30);
             this.AdmConBtn.TabIndex = 36;
             this.AdmConBtn.Text = "Administrar Consultorios";
             this.AdmConBtn.UseVisualStyleBackColor = false;
+            this.AdmConBtn.Click += new System.EventHandler(this.AdmConBtn_Click);
             // 
             // AdmDocBtn
             // 
@@ -250,7 +252,7 @@ namespace Equipo1_HES
             this.AdmDocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdmDocBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmDocBtn.ForeColor = System.Drawing.Color.Black;
-            this.AdmDocBtn.Location = new System.Drawing.Point(31, 177);
+            this.AdmDocBtn.Location = new System.Drawing.Point(31, 131);
             this.AdmDocBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmDocBtn.Name = "AdmDocBtn";
             this.AdmDocBtn.Size = new System.Drawing.Size(159, 30);

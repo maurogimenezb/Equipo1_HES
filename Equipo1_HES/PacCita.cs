@@ -14,13 +14,13 @@ namespace Equipo1_HES
 {
     public partial class PacCita : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Nelson\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         public PacCita()
         {
             InitializeComponent();
-            LblNombre.Text = PacLogged.name;
-            LblApellido.Text = PacLogged.lastname;
+           // LblNombre.Text = PacLogged.name;
+           // LblApellido.Text = PacLogged.lastname;
             MostrarCon();
 
         }
@@ -378,9 +378,9 @@ namespace Equipo1_HES
                     cmd.Parameters.AddWithValue("@OC", CBoxHo.Text);
 
                     cmd.ExecuteNonQuery();
-                    LoginHES login = new LoginHES();
-                    login.Show();
-                    this.Hide();
+                   // LoginHES login = new LoginHES();
+                    //login.Show();
+                   // this.Hide();
                     con.Close();
 
                 }
@@ -395,6 +395,52 @@ namespace Equipo1_HES
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void AdmDocBtn_Click(object sender, EventArgs e)
+        {
+            PacProf FormPacProf = new PacProf();
+            FormPacProf.Show();
+            this.Hide();
+        }
+
+        private void CitaBtn_Click(object sender, EventArgs e)
+        {
+            PacCita FormPacCita = new PacCita();
+            FormPacCita.Show();
+            this.Hide();
+        }
+
+        private void EliminarBtn_Click(object sender, EventArgs e)
+        {
+            PacCitaElim FormPacCitaElim = new PacCitaElim();
+            FormPacCitaElim.Show();
+            this.Hide();
+        }
+
+        private void ModificarBtn_Click(object sender, EventArgs e)
+        {
+            PacCitaEdit ModicicarCita = new PacCitaEdit();
+            ModicicarCita.Show();
+            this.Hide();
+        }
+
+        private void CerrarBtn_Click(object sender, EventArgs e)
+        {
+            LoginHES FormLoginHES = new LoginHES();
+            FormLoginHES.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

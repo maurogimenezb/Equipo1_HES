@@ -20,7 +20,7 @@ namespace Equipo1_HES
             MostrarCons();
         }
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Nelson\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
         private void MostrarCons()
         {
             con.Open();
@@ -47,6 +47,51 @@ namespace Equipo1_HES
                 con.Close();
                 MostrarCons();
             }
+        }
+
+        private void AdmDocBtn_Click(object sender, EventArgs e)
+        {
+            AdmDocAdd FormAdmDocAdd = new AdmDocAdd();
+            FormAdmDocAdd.Show();
+            this.Hide();
+        }
+
+        private void AdmConBtn_Click(object sender, EventArgs e)
+        {
+            AdmConAdd FormAdd = new AdmConAdd();
+            FormAdd.Show();
+            this.Hide();
+        }
+
+        private void CerrarBtn_Click(object sender, EventArgs e)
+        {
+            LoginHES FormLogin = new LoginHES();
+            FormLogin.Show();
+            this.Hide();
+        }
+
+        private void ModBtn_Click(object sender, EventArgs e)
+        {
+            AdmConEdit FormEdit = new AdmConEdit();
+            FormEdit.Show();
+            this.Hide();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            AdmConAdd FormAdd = new AdmConAdd();
+            FormAdd.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

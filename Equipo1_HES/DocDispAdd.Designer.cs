@@ -60,6 +60,7 @@ namespace Equipo1_HES
             this.pictureBox1.Size = new System.Drawing.Size(24, 22);
             this.pictureBox1.TabIndex = 45;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -70,6 +71,7 @@ namespace Equipo1_HES
             this.pictureBox2.Size = new System.Drawing.Size(32, 13);
             this.pictureBox2.TabIndex = 44;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel1
             // 
@@ -90,17 +92,18 @@ namespace Equipo1_HES
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(31, 220);
+            this.button1.Location = new System.Drawing.Point(31, 168);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 30);
             this.button1.TabIndex = 39;
             this.button1.Text = "Registrar Disponibilidad";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CerrarBtn
             // 
@@ -131,13 +134,14 @@ namespace Equipo1_HES
             this.AdmHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdmHomeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmHomeBtn.ForeColor = System.Drawing.Color.Black;
-            this.AdmHomeBtn.Location = new System.Drawing.Point(31, 134);
+            this.AdmHomeBtn.Location = new System.Drawing.Point(31, 287);
             this.AdmHomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmHomeBtn.Name = "AdmHomeBtn";
             this.AdmHomeBtn.Size = new System.Drawing.Size(159, 30);
             this.AdmHomeBtn.TabIndex = 37;
             this.AdmHomeBtn.Text = "Inicio";
             this.AdmHomeBtn.UseVisualStyleBackColor = false;
+            this.AdmHomeBtn.Visible = false;
             // 
             // AdmDocBtn
             // 
@@ -149,13 +153,14 @@ namespace Equipo1_HES
             this.AdmDocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdmDocBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmDocBtn.ForeColor = System.Drawing.Color.Black;
-            this.AdmDocBtn.Location = new System.Drawing.Point(31, 177);
+            this.AdmDocBtn.Location = new System.Drawing.Point(31, 125);
             this.AdmDocBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmDocBtn.Name = "AdmDocBtn";
             this.AdmDocBtn.Size = new System.Drawing.Size(159, 30);
             this.AdmDocBtn.TabIndex = 35;
             this.AdmDocBtn.Text = "Perfil";
             this.AdmDocBtn.UseVisualStyleBackColor = false;
+            this.AdmDocBtn.Click += new System.EventHandler(this.AdmDocBtn_Click);
             // 
             // pictureBox3
             // 

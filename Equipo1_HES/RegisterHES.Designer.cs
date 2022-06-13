@@ -139,6 +139,7 @@ namespace Equipo1_HES
             this.btnCerrar.Size = new System.Drawing.Size(24, 22);
             this.btnCerrar.TabIndex = 31;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnMin
             // 
@@ -149,6 +150,7 @@ namespace Equipo1_HES
             this.btnMin.Size = new System.Drawing.Size(32, 13);
             this.btnMin.TabIndex = 30;
             this.btnMin.TabStop = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // RegisterBtn
             // 
@@ -185,8 +187,8 @@ namespace Equipo1_HES
             this.AtrasBtn.BackColor = System.Drawing.Color.Transparent;
             this.AtrasBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AtrasBtn.BackgroundImage")));
             this.AtrasBtn.FlatAppearance.BorderSize = 0;
-            this.AtrasBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AtrasBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.AtrasBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AtrasBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AtrasBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AtrasBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AtrasBtn.ForeColor = System.Drawing.Color.Black;

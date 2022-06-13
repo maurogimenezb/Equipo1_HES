@@ -15,7 +15,7 @@ namespace Equipo1_HES
     public partial class LoginHES : Form
     {
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Nelson\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
         //conexionbd conexion = new conexionbd();
         // SqlConnection consql = new SqlConnection();
         public LoginHES()
@@ -42,7 +42,7 @@ namespace Equipo1_HES
                     MessageBox.Show("Ingrese un usuario y contraseña");
                 } else if (LoginUser.Text == "admin" && LoginPass.Text == "123")
                 {
-                    HomeAdm Obj = new HomeAdm();
+                    AdmDocAdd Obj = new AdmDocAdd();
                     Obj.Show();
                     this.Hide();
                 }else
@@ -64,9 +64,6 @@ namespace Equipo1_HES
                     sda.Fill(dt);
                     if (dt.Rows[0][0].ToString() == "1")
                     {
-                        HomeDoc DocHome = new HomeDoc();
-                        //PacUpd paciente = new PacUpd();
-                        DocHome.Show();
                         //Para mostrar en los TextBox
                         SqlCommand leer = new SqlCommand("Select * from DoctorTbl where DocUser='" + LoginUser.Text + "'", con);
                         SqlDataReader datos = leer.ExecuteReader();
@@ -86,7 +83,8 @@ namespace Equipo1_HES
                         }
                         datos.Close();
                         //Termina para mostrar TextBox
-
+                        DocProf DocProf = new DocProf();
+                        DocProf.Show();
                         this.Hide();
                     }
                     else
@@ -111,9 +109,6 @@ namespace Equipo1_HES
                     sda.Fill(dt);
                     if (dt.Rows[0][0].ToString() == "1")
                     {
-                        HomePac PacHome = new HomePac();
-                        //PacUpd paciente = new PacUpd();
-                        PacHome.Show();
                         //Para mostrar en los TextBox
                         SqlCommand leer = new SqlCommand("Select * from PacienteTbl where PacName='" + LoginUser.Text + "'", con);
                         SqlDataReader datos = leer.ExecuteReader();
@@ -139,7 +134,8 @@ namespace Equipo1_HES
                         }
                         datos.Close();
                         //Termina para mostrar TextBox
-
+                        PacProf PacProf = new PacProf();
+                        PacProf.Show();
                         this.Hide();
                     }
                     else

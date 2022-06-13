@@ -52,8 +52,8 @@ namespace Equipo1_HES
             this.panel1.Controls.Add(this.ModificarBtn);
             this.panel1.Controls.Add(this.EliminarBtn);
             this.panel1.Controls.Add(this.CitaBtn);
-            this.panel1.Controls.Add(this.CerrarBtn);
             this.panel1.Controls.Add(this.AdmHomeBtn);
+            this.panel1.Controls.Add(this.CerrarBtn);
             this.panel1.Controls.Add(this.AdmDocBtn);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -69,9 +69,9 @@ namespace Equipo1_HES
             this.ModificarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ModificarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ModificarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ModificarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ModificarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ModificarBtn.ForeColor = System.Drawing.Color.Black;
-            this.ModificarBtn.Location = new System.Drawing.Point(31, 281);
+            this.ModificarBtn.Location = new System.Drawing.Point(31, 237);
             this.ModificarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ModificarBtn.Name = "ModificarBtn";
             this.ModificarBtn.Size = new System.Drawing.Size(159, 30);
@@ -88,9 +88,9 @@ namespace Equipo1_HES
             this.EliminarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.EliminarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.EliminarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EliminarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EliminarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EliminarBtn.ForeColor = System.Drawing.Color.Black;
-            this.EliminarBtn.Location = new System.Drawing.Point(31, 238);
+            this.EliminarBtn.Location = new System.Drawing.Point(31, 194);
             this.EliminarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EliminarBtn.Name = "EliminarBtn";
             this.EliminarBtn.Size = new System.Drawing.Size(159, 30);
@@ -107,9 +107,9 @@ namespace Equipo1_HES
             this.CitaBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.CitaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.CitaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CitaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CitaBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CitaBtn.ForeColor = System.Drawing.Color.Black;
-            this.CitaBtn.Location = new System.Drawing.Point(31, 194);
+            this.CitaBtn.Location = new System.Drawing.Point(31, 150);
             this.CitaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CitaBtn.Name = "CitaBtn";
             this.CitaBtn.Size = new System.Drawing.Size(159, 30);
@@ -147,13 +147,14 @@ namespace Equipo1_HES
             this.AdmHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdmHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmHomeBtn.ForeColor = System.Drawing.Color.Black;
-            this.AdmHomeBtn.Location = new System.Drawing.Point(31, 106);
+            this.AdmHomeBtn.Location = new System.Drawing.Point(31, 288);
             this.AdmHomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmHomeBtn.Name = "AdmHomeBtn";
             this.AdmHomeBtn.Size = new System.Drawing.Size(159, 30);
             this.AdmHomeBtn.TabIndex = 37;
             this.AdmHomeBtn.Text = "Inicio";
             this.AdmHomeBtn.UseVisualStyleBackColor = false;
+            this.AdmHomeBtn.Visible = false;
             // 
             // AdmDocBtn
             // 
@@ -163,9 +164,9 @@ namespace Equipo1_HES
             this.AdmDocBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AdmDocBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AdmDocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdmDocBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdmDocBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmDocBtn.ForeColor = System.Drawing.Color.Black;
-            this.AdmDocBtn.Location = new System.Drawing.Point(31, 151);
+            this.AdmDocBtn.Location = new System.Drawing.Point(31, 107);
             this.AdmDocBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmDocBtn.Name = "AdmDocBtn";
             this.AdmDocBtn.Size = new System.Drawing.Size(159, 30);

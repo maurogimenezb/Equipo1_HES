@@ -77,8 +77,9 @@ namespace Equipo1_HES
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(160, 30);
             this.DelBtn.TabIndex = 102;
-            this.DelBtn.Text = "Eliminar Doctor";
+            this.DelBtn.Text = "Eliminar Consul.";
             this.DelBtn.UseVisualStyleBackColor = false;
+            this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
             // 
             // AdmDocDGV
             // 
@@ -121,6 +122,7 @@ namespace Equipo1_HES
             this.pictureBox1.Size = new System.Drawing.Size(24, 22);
             this.pictureBox1.TabIndex = 98;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -131,6 +133,7 @@ namespace Equipo1_HES
             this.pictureBox2.Size = new System.Drawing.Size(32, 13);
             this.pictureBox2.TabIndex = 97;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label1
             // 
@@ -172,6 +175,7 @@ namespace Equipo1_HES
             this.button4.TabIndex = 38;
             this.button4.Text = "Cerrar Sesion";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -183,13 +187,14 @@ namespace Equipo1_HES
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(31, 136);
+            this.button3.Location = new System.Drawing.Point(31, 282);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(159, 30);
             this.button3.TabIndex = 37;
             this.button3.Text = "Inicio";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             // 
             // button2
             // 
@@ -201,13 +206,14 @@ namespace Equipo1_HES
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(31, 219);
+            this.button2.Location = new System.Drawing.Point(31, 171);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(159, 30);
             this.button2.TabIndex = 36;
             this.button2.Text = "Administrar Consultorios";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -219,13 +225,14 @@ namespace Equipo1_HES
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(31, 177);
+            this.button1.Location = new System.Drawing.Point(31, 129);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 30);
             this.button1.TabIndex = 35;
             this.button1.Text = "Administrar Doctores";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox3
             // 
@@ -270,8 +277,9 @@ namespace Equipo1_HES
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(160, 30);
             this.AddBtn.TabIndex = 106;
-            this.AddBtn.Text = "Agregar Doctor";
+            this.AddBtn.Text = "Agregar Consul.";
             this.AddBtn.UseVisualStyleBackColor = false;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click_1);
             // 
             // DocId
             // 

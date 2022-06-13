@@ -115,6 +115,7 @@ namespace Equipo1_HES
             this.button4.TabIndex = 38;
             this.button4.Text = "Cerrar Sesion";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -126,13 +127,14 @@ namespace Equipo1_HES
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(31, 136);
+            this.button3.Location = new System.Drawing.Point(31, 273);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(159, 30);
             this.button3.TabIndex = 37;
             this.button3.Text = "Inicio";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             // 
             // button2
             // 
@@ -144,13 +146,14 @@ namespace Equipo1_HES
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(31, 219);
+            this.button2.Location = new System.Drawing.Point(31, 171);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(159, 30);
             this.button2.TabIndex = 36;
             this.button2.Text = "Administrar Consultorios";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -162,7 +165,7 @@ namespace Equipo1_HES
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(31, 177);
+            this.button1.Location = new System.Drawing.Point(31, 129);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 30);
@@ -203,7 +206,7 @@ namespace Equipo1_HES
             this.ModBtn.Name = "ModBtn";
             this.ModBtn.Size = new System.Drawing.Size(160, 30);
             this.ModBtn.TabIndex = 92;
-            this.ModBtn.Text = "Modificar Doctor";
+            this.ModBtn.Text = "Modificar Consul.";
             this.ModBtn.UseVisualStyleBackColor = false;
             this.ModBtn.Click += new System.EventHandler(this.ModBtn_Click);
             // 
@@ -222,7 +225,7 @@ namespace Equipo1_HES
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(160, 30);
             this.DelBtn.TabIndex = 91;
-            this.DelBtn.Text = "Eliminar Doctor";
+            this.DelBtn.Text = "Eliminar Consul.";
             this.DelBtn.UseVisualStyleBackColor = false;
             this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
             // 

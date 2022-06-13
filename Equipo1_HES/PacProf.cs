@@ -78,5 +78,33 @@ namespace Equipo1_HES
         {
 
         }
+
+        private void AdmDocBtn_Click_1(object sender, EventArgs e)
+        {
+            PacProf FormPacProf = new PacProf();
+            FormPacProf.Show();
+            this.Hide();
+        }
+
+        private void CitaBtn_Click(object sender, EventArgs e)
+        {
+            PacCita FormPacCita = new PacCita();
+            FormPacCita.Show();
+            this.Hide();
+        }
+
+        private void EliminarBtn_Click(object sender, EventArgs e)
+        {
+            PacCitaElim FormPacCitaElim = new PacCitaElim();
+            FormPacCitaElim.Show();
+            this.Hide();
+        }
+
+        private void ModificarBtn_Click(object sender, EventArgs e)
+        {
+            PacCitaEdit ModicicarCita = new PacCitaEdit();
+            ModicicarCita.Show();
+            this.Hide();
+        }
     }
 }

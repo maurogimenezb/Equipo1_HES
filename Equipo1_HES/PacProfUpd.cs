@@ -15,7 +15,7 @@ namespace Equipo1_HES
     public partial class PacProfUpd : Form
     {
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Nelson\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         public PacProfUpd()
         {
@@ -124,6 +124,34 @@ namespace Equipo1_HES
         private void btnMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void AdmDocBtn_Click_1(object sender, EventArgs e)
+        {
+            PacProf FormPacProf = new PacProf();
+            FormPacProf.Show();
+            this.Hide();
+        }
+
+        private void CitaBtn_Click(object sender, EventArgs e)
+        {
+            PacCita FormPacCita = new PacCita();
+            FormPacCita.Show();
+            this.Hide();
+        }
+
+        private void EliminarBtn_Click(object sender, EventArgs e)
+        {
+            PacCitaElim FormPacCitaElim = new PacCitaElim();
+            FormPacCitaElim.Show();
+            this.Hide();
+        }
+
+        private void ModificarBtn_Click(object sender, EventArgs e)
+        {
+            PacCitaEdit ModicicarCita = new PacCitaEdit();
+            ModicicarCita.Show();
+            this.Hide();
         }
     }
 }
