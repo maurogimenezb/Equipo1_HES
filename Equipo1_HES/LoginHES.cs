@@ -15,7 +15,10 @@ namespace Equipo1_HES
     public partial class LoginHES : Form
     {
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+       // SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Hospital 2.0\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+
         //conexionbd conexion = new conexionbd();
         // SqlConnection consql = new SqlConnection();
         public LoginHES()
@@ -104,13 +107,13 @@ namespace Equipo1_HES
                 else
                 {
                     con.Open();
-                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from PacienteTbl where PacName='" + LoginUser.Text + "' and PacPass='" + LoginPass.Text + "'", con);
+                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from PacienteTbl where PacUser='" + LoginUser.Text + "' and PacPass='" + LoginPass.Text + "'", con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
                     if (dt.Rows[0][0].ToString() == "1")
                     {
                         //Para mostrar en los TextBox
-                        SqlCommand leer = new SqlCommand("Select * from PacienteTbl where PacName='" + LoginUser.Text + "'", con);
+                        SqlCommand leer = new SqlCommand("Select * from PacienteTbl where PacUser='" + LoginUser.Text + "'", con);
                         SqlDataReader datos = leer.ExecuteReader();
 
                         if(datos.Read()==true)

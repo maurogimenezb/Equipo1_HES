@@ -81,7 +81,7 @@ namespace Equipo1_HES
             this.ModificarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ModificarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ModificarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ModificarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ModificarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ModificarBtn.ForeColor = System.Drawing.Color.Black;
             this.ModificarBtn.Location = new System.Drawing.Point(31, 236);
             this.ModificarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -100,7 +100,7 @@ namespace Equipo1_HES
             this.CerrarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.CerrarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.CerrarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CerrarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CerrarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CerrarBtn.ForeColor = System.Drawing.Color.Black;
             this.CerrarBtn.Location = new System.Drawing.Point(31, 340);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -119,7 +119,7 @@ namespace Equipo1_HES
             this.EliminarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.EliminarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.EliminarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EliminarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EliminarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EliminarBtn.ForeColor = System.Drawing.Color.Black;
             this.EliminarBtn.Location = new System.Drawing.Point(31, 193);
             this.EliminarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -147,7 +147,7 @@ namespace Equipo1_HES
             this.CitaBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.CitaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.CitaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CitaBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CitaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CitaBtn.ForeColor = System.Drawing.Color.Black;
             this.CitaBtn.Location = new System.Drawing.Point(31, 149);
             this.CitaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -166,7 +166,7 @@ namespace Equipo1_HES
             this.AdmDocBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AdmDocBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AdmDocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdmDocBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdmDocBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmDocBtn.ForeColor = System.Drawing.Color.Black;
             this.AdmDocBtn.Location = new System.Drawing.Point(31, 106);
             this.AdmDocBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -218,10 +218,10 @@ namespace Equipo1_HES
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(370, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 21);
+            this.label1.Size = new System.Drawing.Size(140, 20);
             this.label1.TabIndex = 114;
             this.label1.Text = "RESERVAR CITA";
             // 
@@ -282,6 +282,7 @@ namespace Equipo1_HES
             this.AdmCon.RowTemplate.Height = 25;
             this.AdmCon.Size = new System.Drawing.Size(440, 114);
             this.AdmCon.TabIndex = 128;
+            this.AdmCon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdmCon_CellContentClick);
             // 
             // label5
             // 

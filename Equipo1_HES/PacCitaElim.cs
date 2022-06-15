@@ -19,7 +19,7 @@ namespace Equipo1_HES
             InitializeComponent();
             MostrarCon();
         }
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Hospital 2.0\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
 
         private void MostrarCon()
@@ -40,7 +40,7 @@ namespace Equipo1_HES
             int cont=0;
             
             if ( CitaId.Text == "")
-                MessageBox.Show("Id o CI vacio por favor rellenar para poder eliminar");
+                MessageBox.Show("No se agrego ningun Id a ser elimiar");
             else
             {
                 con.Open();
@@ -62,7 +62,6 @@ namespace Equipo1_HES
                         string query = "delete from CitaTbl where Id=" + CitaId.Text + "";
                         SqlCommand cmd = new SqlCommand(query, con);
                         cmd.ExecuteNonQuery();
-                        //MessageBox.Show("Se ha eliminado su Cita");
                         Bandera = false;
                         con.Close();
                         MostrarCon();

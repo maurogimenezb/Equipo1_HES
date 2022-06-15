@@ -38,9 +38,7 @@ namespace Equipo1_HES
 
         private void AdmDocBtn_Click(object sender, EventArgs e)
         {
-            DocProf DocProf = new DocProf();
-            DocProf.Show();
-            this.Hide();
+             
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,6 +52,13 @@ namespace Equipo1_HES
         {
             LoginHES FormLogin = new LoginHES();
             FormLogin.Show();
+            this.Hide();
+        }
+
+        private void BtnConsulta_Click(object sender, EventArgs e)
+        {
+            CunsultasDoc Consultas = new CunsultasDoc();
+            Consultas.Show();
             this.Hide();
         }
     }

@@ -50,6 +50,7 @@ namespace Equipo1_HES
             this.AddBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Id = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdmCon)).BeginInit();
@@ -79,7 +80,7 @@ namespace Equipo1_HES
             this.ModificarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.ModificarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ModificarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ModificarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ModificarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ModificarBtn.ForeColor = System.Drawing.Color.Black;
             this.ModificarBtn.Location = new System.Drawing.Point(32, 236);
             this.ModificarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -126,7 +127,7 @@ namespace Equipo1_HES
             this.AdmDocBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AdmDocBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AdmDocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdmDocBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdmDocBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmDocBtn.ForeColor = System.Drawing.Color.Black;
             this.AdmDocBtn.Location = new System.Drawing.Point(32, 106);
             this.AdmDocBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -145,7 +146,7 @@ namespace Equipo1_HES
             this.EliminarBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.EliminarBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.EliminarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EliminarBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EliminarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EliminarBtn.ForeColor = System.Drawing.Color.Black;
             this.EliminarBtn.Location = new System.Drawing.Point(32, 193);
             this.EliminarBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -164,7 +165,7 @@ namespace Equipo1_HES
             this.CitaBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.CitaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.CitaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CitaBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CitaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CitaBtn.ForeColor = System.Drawing.Color.Black;
             this.CitaBtn.Location = new System.Drawing.Point(32, 149);
             this.CitaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -178,10 +179,10 @@ namespace Equipo1_HES
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(356, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 21);
+            this.label1.Size = new System.Drawing.Size(140, 20);
             this.label1.TabIndex = 97;
             this.label1.Text = "MODIFICAR CITA";
             // 
@@ -289,7 +290,7 @@ namespace Equipo1_HES
             this.AddBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AddBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
             this.AddBtn.Location = new System.Drawing.Point(398, 339);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -322,12 +323,21 @@ namespace Equipo1_HES
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // Id
+            // 
+            this.Id.Location = new System.Drawing.Point(227, 11);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(37, 23);
+            this.Id.TabIndex = 145;
+            this.Id.Visible = false;
+            // 
             // PacCitaEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(680, 380);
+            this.Controls.Add(this.Id);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.AddBtn);
@@ -378,5 +388,6 @@ namespace Equipo1_HES
         private System.Windows.Forms.Button CitaBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox Id;
     }
 }

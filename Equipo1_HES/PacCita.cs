@@ -14,13 +14,11 @@ namespace Equipo1_HES
 {
     public partial class PacCita : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Hospital 2.0\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         public PacCita()
         {
             InitializeComponent();
-           // LblNombre.Text = PacLogged.name;
-           // LblApellido.Text = PacLogged.lastname;
             MostrarCon();
 
         }
@@ -59,10 +57,15 @@ namespace Equipo1_HES
              con.Close();*/
             // int a;
             //con.Open();
-           // DocCombo.Items.Add = " ";
+            // DocCombo.Items.Add = " ";
+
+           //BoxHo.Text = string.Empty;
+            DocCombo.Text = string.Empty;
+            CBoxFecha.Text = string.Empty;
+            CBoxHo.Text = string.Empty;
+            i = 0; 
             con.Open();
-           
-            MessageBox.Show("Doc");
+          
            
             if ( SpecCombo.SelectedIndex == 0)
             {
@@ -84,7 +87,7 @@ namespace Equipo1_HES
                 DataTable dt = new DataTable();
                 dt.Columns.Add("DocName");
                 dt.Load(rdr);
-                MessageBox.Show("Odontologo");
+                //MessageBox.Show("Odontologo");
                 DocCombo.ValueMember = "DocName";
                 DocCombo.DataSource = dt;
               
@@ -129,9 +132,6 @@ namespace Equipo1_HES
         private void MostrarFecha()
         {
             
-
-            MessageBox.Show("Mostrar fecha " +DocCombo.Text + i);
-           
             if (i>0)
             {
 
@@ -146,171 +146,174 @@ namespace Equipo1_HES
                 CBoxFecha.ValueMember = "DocDisp";
                 CBoxFecha.DataSource = dt;
                 con.Close();
-
+                
             }
             i++;
-            
+            CBoxHo.Items.Clear();
             CargarHora();
         }
 
         private void CargarHora()
         {
-           // CBoxHo.Items.Clear();
-
-            if (SpecCombo.Text == "Medicina General")
+            
+            if (CBoxFecha.Text != "")
             {
-               // MessageBox.Show("Estoy en medicina ");
-                string[] horaMedicina = new string[10];
-                horaMedicina[0] = "07:00";
-                horaMedicina[1] = "08:00";
-                horaMedicina[2] = "09:00";
-                horaMedicina[3] = "10:00";
-                horaMedicina[4] = "11:00";
-                horaMedicina[5] = "13:00";
-                horaMedicina[6] = "14:00";
-                horaMedicina[7] = "15:00";
-                horaMedicina[8] = "16:00";
-                horaMedicina[9] = "17:00";
 
-                con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from CitaTbl where FechaCon='" + CBoxFecha.Text + "'", con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-               // MessageBox.Show("Estoy en medicina " + dt.Rows[0][0].ToString());
-                if (dt.Rows[0][0].ToString() != "0")
+                if (SpecCombo.Text == "Medicina General")
                 {
-                   // MessageBox.Show("Eston en el if ");
-                    con.Close();
-                    for (int c = 0; c < 10; c++)
-                    {
-                        con.Open();
-                        SqlCommand leer = new SqlCommand("Select * from CitaTbl where HoraCon='" + horaMedicina[c] + "' and FechaCon='" + CBoxFecha.Text + "'", con);
-                        SqlDataReader datos = leer.ExecuteReader();
+                    // MessageBox.Show("Estoy en medicina ");
+                    string[] horaMedicina = new string[10];
+                    horaMedicina[0] = "07:00";
+                    horaMedicina[1] = "08:00";
+                    horaMedicina[2] = "09:00";
+                    horaMedicina[3] = "10:00";
+                    horaMedicina[4] = "11:00";
+                    horaMedicina[5] = "13:00";
+                    horaMedicina[6] = "14:00";
+                    horaMedicina[7] = "15:00";
+                    horaMedicina[8] = "16:00";
+                    horaMedicina[9] = "17:00";
 
-                        if (datos.Read() == false)
+                    con.Open();
+                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from CitaTbl where FechaCon='" + CBoxFecha.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    // MessageBox.Show("Estoy en medicina " + dt.Rows[0][0].ToString());
+                    if (dt.Rows[0][0].ToString() != "0")
+                    {
+                        // MessageBox.Show("Eston en el if ");
+                        con.Close();
+                        for (int c = 0; c < 10; c++)
+                        {
+                            con.Open();
+                            SqlCommand leer = new SqlCommand("Select * from CitaTbl where HoraCon='" + horaMedicina[c] + "' and FechaCon='" + CBoxFecha.Text + "'", con);
+                            SqlDataReader datos = leer.ExecuteReader();
+
+                            if (datos.Read() == false)
+                            {
+                                CBoxHo.Items.Add(horaMedicina[c]);
+                            }
+                            con.Close();
+                        }
+
+                    }
+                    else
+                    {
+
+                        for (int c = 0; c < 10; c++)
                         {
                             CBoxHo.Items.Add(horaMedicina[c]);
                         }
-                        con.Close();
+
                     }
-
-                }
-                else
-                {
-
-                    for (int c = 0; c < 10; c++)
-                    {
-                        CBoxHo.Items.Add(horaMedicina[c]);
-                    }
-
-                }
-                con.Close();
-
-            }
-            else if (SpecCombo.Text == "Odontologia")
-            {
-               
-                string[] horaOdonto = new string[10];
-                horaOdonto[0] = "07:00";
-                horaOdonto[1] = "08:30";
-                horaOdonto[2] = "09:30";
-                horaOdonto[3] = "10:30";
-                horaOdonto[4] = "11:30";
-                horaOdonto[5] = "13:30";
-                horaOdonto[6] = "14:30";
-                horaOdonto[7] = "15:30";
-                horaOdonto[8] = "16:30";
-                horaOdonto[9] = "17:30";
-
-                con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from CitaTbl where FechaCon='" + CBoxFecha.Text + "'", con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-               // MessageBox.Show("Estoy en odontologia " + dt.Rows[0][0].ToString());
-                if (dt.Rows[0][0].ToString() != "0")
-                {
-                    MessageBox.Show("Eston en el if ");
                     con.Close();
-                    for (int c=0; c < 10; c++)
+
+
+                }
+                else if (SpecCombo.Text == "Odontologia")
+                {
+
+                    string[] horaOdonto = new string[10];
+                    horaOdonto[0] = "07:00";
+                    horaOdonto[1] = "08:30";
+                    horaOdonto[2] = "09:30";
+                    horaOdonto[3] = "10:30";
+                    horaOdonto[4] = "11:30";
+                    horaOdonto[5] = "13:30";
+                    horaOdonto[6] = "14:30";
+                    horaOdonto[7] = "15:30";
+                    horaOdonto[8] = "16:30";
+                    horaOdonto[9] = "17:30";
+
+                    con.Open();
+                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from CitaTbl where FechaCon='" + CBoxFecha.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    // MessageBox.Show("Estoy en odontologia " + dt.Rows[0][0].ToString());
+                    if (dt.Rows[0][0].ToString() != "0")
                     {
-                        con.Open();
-                        SqlCommand leer = new SqlCommand("Select * from CitaTbl where HoraCon='" +horaOdonto[c]+ "' and FechaCon='" + CBoxFecha.Text + "'", con);
-                        SqlDataReader datos = leer.ExecuteReader();
                         
-                        if(datos.Read() == false)
+                        con.Close();
+                        for (int c = 0; c < 10; c++)
+                        {
+                            con.Open();
+                            SqlCommand leer = new SqlCommand("Select * from CitaTbl where HoraCon='" + horaOdonto[c] + "' and FechaCon='" + CBoxFecha.Text + "'", con);
+                            SqlDataReader datos = leer.ExecuteReader();
+
+                            if (datos.Read() == false)
+                            {
+                                CBoxHo.Items.Add(horaOdonto[c]);
+                            }
+                            con.Close();
+                        }
+
+                    }
+                    else
+                    {
+                        // MessageBox.Show("Eston en el else ");
+                        for (int c = 0; c < 10; c++)
                         {
                             CBoxHo.Items.Add(horaOdonto[c]);
                         }
-                        con.Close();
+
                     }
-
-                }
-                else
-                {
-                   // MessageBox.Show("Eston en el else ");
-                    for (int c = 0; c < 10; c++)
-                    {
-                        CBoxHo.Items.Add(horaOdonto[c]);
-                    }
-                    
-                }
-                con.Close();
-               
-                
-                
-
-            }
-            else if(SpecCombo.Text == "Pssicologia")
-            {
-
-                string[] horaPsicologia = new string[10];
-                horaPsicologia[0] = "08:00";
-                horaPsicologia[1] = "09:30";
-                horaPsicologia[2] = "10:30";
-                horaPsicologia[3] = "11:30";
-                horaPsicologia[4] = "13:30";
-                horaPsicologia[5] = "14:30";
-                horaPsicologia[6] = "15:30";
-                horaPsicologia[7] = "16:30";
-                horaPsicologia[8] = "17:30";
-
-                con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from CitaTbl where FechaCon='" + CBoxFecha.Text + "'", con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                if (dt.Rows[0][0].ToString() != "0")
-                {
-                   // MessageBox.Show("Eston en el if ");
                     con.Close();
-                    for (int c = 0; c < 10; c++)
-                    {
-                        con.Open();
-                        SqlCommand leer = new SqlCommand("Select * from CitaTbl where HoraCon='" + horaPsicologia[c] + "' and FechaCon='" + CBoxFecha.Text + "'", con);
-                        SqlDataReader datos = leer.ExecuteReader();
 
-                        if (datos.Read() == false)
+
+
+
+                }
+                else if (SpecCombo.Text == "Psicologia")
+                {
+
+                    string[] horaPsicologia = new string[10];
+                    horaPsicologia[0] = "08:00";
+                    horaPsicologia[1] = "09:30";
+                    horaPsicologia[2] = "10:30";
+                    horaPsicologia[3] = "11:30";
+                    horaPsicologia[4] = "13:30";
+                    horaPsicologia[5] = "14:30";
+                    horaPsicologia[6] = "15:30";
+                    horaPsicologia[7] = "16:30";
+                    horaPsicologia[8] = "17:30";
+
+                    con.Open();
+                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from CitaTbl where FechaCon='" + CBoxFecha.Text + "'", con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    if (dt.Rows[0][0].ToString() != "0")
+                    {
+                        // MessageBox.Show("Eston en el if ");
+                        con.Close();
+                        for (int c = 0; c < 9; c++)
+                        {
+                            con.Open();
+                            SqlCommand leer = new SqlCommand("Select * from CitaTbl where HoraCon='" + horaPsicologia[c] + "' and FechaCon='" + CBoxFecha.Text + "'", con);
+                            SqlDataReader datos = leer.ExecuteReader();
+
+                            if (datos.Read() == false)
+                            {
+                                CBoxHo.Items.Add(horaPsicologia[c]);
+                            }
+                            con.Close();
+                        }
+
+                    }
+                    else
+                    {
+
+                        for (int c = 0; c < 9; c++)
                         {
                             CBoxHo.Items.Add(horaPsicologia[c]);
                         }
-                        con.Close();
+
                     }
+                    con.Close();
 
                 }
-                else
-                {
-
-                    for (int c = 0; c < 10; c++)
-                    {
-                        CBoxHo.Items.Add(horaPsicologia[c]);
-                    }
-
-                }
-                con.Close();
-
             }
-
-
-         }
+            
+        }
 
         private void SpecCombo_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -334,8 +337,8 @@ namespace Equipo1_HES
 
         private void CBoxHo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CBoxHo.Text = string.Empty;
-            CargarHora();
+            //CBoxHo.Items.Clear();
+            //CargarHora();
           
         }
 
@@ -346,7 +349,8 @@ namespace Equipo1_HES
 
         private void DocCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+           MessageBox.Show("Nelson");
+            
             MostrarFecha();
            
         }
@@ -378,9 +382,7 @@ namespace Equipo1_HES
                     cmd.Parameters.AddWithValue("@OC", CBoxHo.Text);
 
                     cmd.ExecuteNonQuery();
-                   // LoginHES login = new LoginHES();
-                    //login.Show();
-                   // this.Hide();
+
                     con.Close();
 
                 }
@@ -441,6 +443,11 @@ namespace Equipo1_HES
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void AdmCon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
