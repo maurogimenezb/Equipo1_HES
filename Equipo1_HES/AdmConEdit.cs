@@ -20,7 +20,7 @@ namespace Equipo1_HES
             MostrarCons();
         }
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Hospital 2.0\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void MostrarCons()
         {
@@ -60,7 +60,7 @@ namespace Equipo1_HES
             string query = "update ConsultorioTbl set ConName= '" + DName.Text + "' where ConId= " + DocId.Text + "";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Se ha modificado doctor");
+            MessageBox.Show("Se ha modificado consultorio");
             con.Close();
             MostrarCons();
         }
@@ -109,6 +109,13 @@ namespace Equipo1_HES
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AdmPacDel FormPac = new AdmPacDel();
+            FormPac.Show();
+            this.Hide();
         }
     }
 }

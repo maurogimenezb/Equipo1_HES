@@ -31,6 +31,7 @@ namespace Equipo1_HES
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DocProf));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnConsulta = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.CerrarBtn = new System.Windows.Forms.Button();
             this.AdmHomeBtn = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@ namespace Equipo1_HES
             this.txtType = new System.Windows.Forms.Label();
             this.LblCons = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BtnConsulta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -70,6 +70,25 @@ namespace Equipo1_HES
             this.panel1.Size = new System.Drawing.Size(221, 380);
             this.panel1.TabIndex = 41;
             // 
+            // BtnConsulta
+            // 
+            this.BtnConsulta.BackColor = System.Drawing.Color.Transparent;
+            this.BtnConsulta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnConsulta.BackgroundImage")));
+            this.BtnConsulta.FlatAppearance.BorderSize = 0;
+            this.BtnConsulta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnConsulta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConsulta.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnConsulta.ForeColor = System.Drawing.Color.Black;
+            this.BtnConsulta.Location = new System.Drawing.Point(31, 212);
+            this.BtnConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnConsulta.Name = "BtnConsulta";
+            this.BtnConsulta.Size = new System.Drawing.Size(159, 30);
+            this.BtnConsulta.TabIndex = 41;
+            this.BtnConsulta.Text = "Consultar Pacientes";
+            this.BtnConsulta.UseVisualStyleBackColor = false;
+            this.BtnConsulta.Click += new System.EventHandler(this.BtnConsulta_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
@@ -78,7 +97,7 @@ namespace Equipo1_HES
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(31, 173);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -297,25 +316,6 @@ namespace Equipo1_HES
             this.label2.Size = new System.Drawing.Size(129, 20);
             this.label2.TabIndex = 99;
             this.label2.Text = "CONSULTORIO:";
-            // 
-            // BtnConsulta
-            // 
-            this.BtnConsulta.BackColor = System.Drawing.Color.Transparent;
-            this.BtnConsulta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnConsulta.BackgroundImage")));
-            this.BtnConsulta.FlatAppearance.BorderSize = 0;
-            this.BtnConsulta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnConsulta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnConsulta.ForeColor = System.Drawing.Color.Black;
-            this.BtnConsulta.Location = new System.Drawing.Point(31, 212);
-            this.BtnConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnConsulta.Name = "BtnConsulta";
-            this.BtnConsulta.Size = new System.Drawing.Size(159, 30);
-            this.BtnConsulta.TabIndex = 41;
-            this.BtnConsulta.Text = "Consultas";
-            this.BtnConsulta.UseVisualStyleBackColor = false;
-            this.BtnConsulta.Click += new System.EventHandler(this.BtnConsulta_Click);
             // 
             // DocProf
             // 

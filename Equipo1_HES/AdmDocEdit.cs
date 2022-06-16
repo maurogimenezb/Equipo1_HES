@@ -21,7 +21,7 @@ namespace Equipo1_HES
 
         }
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Hospital 2.0\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void MostrarDoc()
         {
@@ -59,6 +59,7 @@ namespace Equipo1_HES
                 DName.Text = AdmDocDGV.CurrentRow.Cells[1].Value.ToString();
                 DPass.Text = AdmDocDGV.CurrentRow.Cells[2].Value.ToString();
                 DSpec.Text = AdmDocDGV.CurrentRow.Cells[3].Value.ToString();
+                DDisp.Text = AdmDocDGV.CurrentRow.Cells[4].Value.ToString();
                 DCons.Text = AdmDocDGV.CurrentRow.Cells[5].Value.ToString();
                 DLastName.Text = AdmDocDGV.CurrentRow.Cells[6].Value.ToString();
                 DUser.Text = AdmDocDGV.CurrentRow.Cells[7].Value.ToString();
@@ -74,9 +75,27 @@ namespace Equipo1_HES
         private void ModBtn_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "update DoctorTbl set DocName= '"+DName.Text+ "', DocPass= '" + DPass.Text + "', DocSpec= '" + DSpec.Text + "', DocCon= '" + DCons.Text + "', DocLastName= '" + DLastName.Text + "', DocUser= '" + DUser.Text + "' where DocId= " + DocId.Text + "";
-            SqlCommand cmd = new SqlCommand(query, con);
+            //string query = "update DoctorTbl set DocName= '"+DName.Text+ "', DocPass= '" + DPass.Text + "', DocSpec= '" + DSpec.Text + "', DocDisp= '" + DDisp.Text + "', DocCon= '" + DCons.Text + "', DocLastName= '" + DLastName.Text + "', DocUser= '" + DUser.Text + "' where DocId= " + DocId.Text + "";
+            //SqlCommand cmd = new SqlCommand(query, con);
+            //cmd.ExecuteNonQuery();
+            SqlCommand cmd = new SqlCommand("update DoctorTbl set DocCon= '" + DCons.Text + "',DocName=@DN,DocPass=@DP,DocSpec=@DS,DocDisp=@DD,DocLastName=@DLN,DocUser=@DU where DocId=@key", con);
+            cmd.Parameters.AddWithValue("@DN", DName.Text);
+            cmd.Parameters.AddWithValue("@DP", DPass.Text);
+            cmd.Parameters.AddWithValue("@DS", DSpec.SelectedItem.ToString());
+            cmd.Parameters.AddWithValue("@DD", DDisp.Value.Date);
+            //cmd.Parameters.AddWithValue("@DC", DCons.SelectedItem.ToString());
+            cmd.Parameters.AddWithValue("@DLN", DLastName.Text);
+            cmd.Parameters.AddWithValue("@DU", DUser.Text);
+            cmd.Parameters.AddWithValue("@key", DocId.Text);
             cmd.ExecuteNonQuery();
+
+            SqlCommand cmd1 = new SqlCommand("update CitaTbl set FechaCon=@FC, DocSpec=@DSs where DocName=@DN", con);
+            cmd1.Parameters.AddWithValue("@FC", DDisp.Value.Date);
+            cmd1.Parameters.AddWithValue("@DN", DName.Text);
+            cmd1.Parameters.AddWithValue("@DSs", DSpec.SelectedItem.ToString());
+            cmd1.ExecuteNonQuery();
+
+
             MessageBox.Show("Se ha modificado doctor");
             con.Close();
             MostrarDoc();
@@ -131,6 +150,13 @@ namespace Equipo1_HES
         {
             AdmConAdd FormAdd = new AdmConAdd();
             FormAdd.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdmPacDel FormPac = new AdmPacDel();
+            FormPac.Show();
             this.Hide();
         }
     }

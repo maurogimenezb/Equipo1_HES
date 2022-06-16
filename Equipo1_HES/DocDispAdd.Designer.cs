@@ -33,6 +33,7 @@ namespace Equipo1_HES
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnConsulta = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.CerrarBtn = new System.Windows.Forms.Button();
             this.AdmHomeBtn = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@ namespace Equipo1_HES
             this.DocId = new System.Windows.Forms.TextBox();
             this.RegLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.DName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -76,6 +78,7 @@ namespace Equipo1_HES
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.BtnConsulta);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.CerrarBtn);
             this.panel1.Controls.Add(this.AdmHomeBtn);
@@ -85,6 +88,25 @@ namespace Equipo1_HES
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 380);
             this.panel1.TabIndex = 43;
+            // 
+            // BtnConsulta
+            // 
+            this.BtnConsulta.BackColor = System.Drawing.Color.Transparent;
+            this.BtnConsulta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnConsulta.BackgroundImage")));
+            this.BtnConsulta.FlatAppearance.BorderSize = 0;
+            this.BtnConsulta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnConsulta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConsulta.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnConsulta.ForeColor = System.Drawing.Color.Black;
+            this.BtnConsulta.Location = new System.Drawing.Point(31, 211);
+            this.BtnConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnConsulta.Name = "BtnConsulta";
+            this.BtnConsulta.Size = new System.Drawing.Size(159, 30);
+            this.BtnConsulta.TabIndex = 45;
+            this.BtnConsulta.Text = "Consultar Pacientes";
+            this.BtnConsulta.UseVisualStyleBackColor = false;
+            this.BtnConsulta.Click += new System.EventHandler(this.BtnConsulta_Click);
             // 
             // button1
             // 
@@ -251,12 +273,21 @@ namespace Equipo1_HES
             this.label2.TabIndex = 110;
             this.label2.Text = "DISPONIBILIDAD:";
             // 
+            // DName
+            // 
+            this.DName.Location = new System.Drawing.Point(483, 12);
+            this.DName.Name = "DName";
+            this.DName.Size = new System.Drawing.Size(37, 23);
+            this.DName.TabIndex = 112;
+            this.DName.Visible = false;
+            // 
             // DocDispAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(680, 380);
+            this.Controls.Add(this.DName);
             this.Controls.Add(this.RegLbl);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DocId);
@@ -298,5 +329,7 @@ namespace Equipo1_HES
         private System.Windows.Forms.TextBox DocId;
         private System.Windows.Forms.Label RegLbl;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BtnConsulta;
+        private System.Windows.Forms.TextBox DName;
     }
 }

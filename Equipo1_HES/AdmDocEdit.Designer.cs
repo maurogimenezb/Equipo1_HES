@@ -60,6 +60,9 @@ namespace Equipo1_HES
             this.DName = new System.Windows.Forms.TextBox();
             this.txtType = new System.Windows.Forms.Label();
             this.txtUsers = new System.Windows.Forms.Label();
+            this.DDisp = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AdmDocDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -77,7 +80,7 @@ namespace Equipo1_HES
             this.ModBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ModBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ModBtn.ForeColor = System.Drawing.Color.White;
-            this.ModBtn.Location = new System.Drawing.Point(528, 118);
+            this.ModBtn.Location = new System.Drawing.Point(529, 119);
             this.ModBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ModBtn.Name = "ModBtn";
             this.ModBtn.Size = new System.Drawing.Size(100, 30);
@@ -96,7 +99,7 @@ namespace Equipo1_HES
             this.DelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DelBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DelBtn.ForeColor = System.Drawing.Color.White;
-            this.DelBtn.Location = new System.Drawing.Point(471, 241);
+            this.DelBtn.Location = new System.Drawing.Point(469, 257);
             this.DelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(160, 30);
@@ -115,7 +118,7 @@ namespace Equipo1_HES
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(285, 241);
+            this.AddBtn.Location = new System.Drawing.Point(283, 257);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(160, 30);
@@ -129,10 +132,10 @@ namespace Equipo1_HES
             this.AdmDocDGV.BackgroundColor = System.Drawing.Color.White;
             this.AdmDocDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AdmDocDGV.GridColor = System.Drawing.Color.White;
-            this.AdmDocDGV.Location = new System.Drawing.Point(253, 276);
+            this.AdmDocDGV.Location = new System.Drawing.Point(253, 292);
             this.AdmDocDGV.Name = "AdmDocDGV";
             this.AdmDocDGV.RowTemplate.Height = 25;
-            this.AdmDocDGV.Size = new System.Drawing.Size(401, 92);
+            this.AdmDocDGV.Size = new System.Drawing.Size(401, 76);
             this.AdmDocDGV.TabIndex = 70;
             this.AdmDocDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdmDocDGV_CellContentClick);
             // 
@@ -171,6 +174,7 @@ namespace Equipo1_HES
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.CerrarBtn);
             this.panel1.Controls.Add(this.AdmHomeBtn);
             this.panel1.Controls.Add(this.AdmConBtn);
@@ -280,7 +284,7 @@ namespace Equipo1_HES
             this.DCons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DCons.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DCons.FormattingEnabled = true;
-            this.DCons.Location = new System.Drawing.Point(393, 202);
+            this.DCons.Location = new System.Drawing.Point(393, 192);
             this.DCons.Name = "DCons";
             this.DCons.Size = new System.Drawing.Size(121, 25);
             this.DCons.TabIndex = 102;
@@ -290,7 +294,7 @@ namespace Equipo1_HES
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(257, 206);
+            this.label6.Location = new System.Drawing.Point(257, 196);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 21);
             this.label6.TabIndex = 101;
@@ -305,7 +309,7 @@ namespace Equipo1_HES
             "Medicina General",
             "Odontologia",
             "Psicologia"});
-            this.DSpec.Location = new System.Drawing.Point(393, 169);
+            this.DSpec.Location = new System.Drawing.Point(393, 159);
             this.DSpec.Name = "DSpec";
             this.DSpec.Size = new System.Drawing.Size(121, 25);
             this.DSpec.TabIndex = 100;
@@ -315,7 +319,7 @@ namespace Equipo1_HES
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(262, 173);
+            this.label5.Location = new System.Drawing.Point(262, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 21);
             this.label5.TabIndex = 99;
@@ -324,7 +328,7 @@ namespace Equipo1_HES
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel6.Location = new System.Drawing.Point(393, 130);
+            this.panel6.Location = new System.Drawing.Point(393, 120);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(121, 1);
             this.panel6.TabIndex = 98;
@@ -333,7 +337,7 @@ namespace Equipo1_HES
             // 
             this.DUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DUser.Location = new System.Drawing.Point(393, 111);
+            this.DUser.Location = new System.Drawing.Point(393, 101);
             this.DUser.Name = "DUser";
             this.DUser.Size = new System.Drawing.Size(121, 16);
             this.DUser.TabIndex = 97;
@@ -343,7 +347,7 @@ namespace Equipo1_HES
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(305, 112);
+            this.label4.Location = new System.Drawing.Point(305, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 21);
             this.label4.TabIndex = 96;
@@ -352,7 +356,7 @@ namespace Equipo1_HES
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel5.Location = new System.Drawing.Point(393, 99);
+            this.panel5.Location = new System.Drawing.Point(393, 89);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(121, 1);
             this.panel5.TabIndex = 95;
@@ -361,7 +365,7 @@ namespace Equipo1_HES
             // 
             this.DLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DLastName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DLastName.Location = new System.Drawing.Point(393, 81);
+            this.DLastName.Location = new System.Drawing.Point(393, 71);
             this.DLastName.Name = "DLastName";
             this.DLastName.Size = new System.Drawing.Size(121, 16);
             this.DLastName.TabIndex = 94;
@@ -371,7 +375,7 @@ namespace Equipo1_HES
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(301, 81);
+            this.label2.Location = new System.Drawing.Point(301, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 21);
             this.label2.TabIndex = 93;
@@ -380,7 +384,7 @@ namespace Equipo1_HES
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel3.Location = new System.Drawing.Point(393, 159);
+            this.panel3.Location = new System.Drawing.Point(393, 149);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(121, 1);
             this.panel3.TabIndex = 92;
@@ -388,7 +392,7 @@ namespace Equipo1_HES
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(393, 69);
+            this.panel2.Location = new System.Drawing.Point(393, 59);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(121, 1);
             this.panel2.TabIndex = 91;
@@ -397,7 +401,7 @@ namespace Equipo1_HES
             // 
             this.DPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DPass.Location = new System.Drawing.Point(393, 143);
+            this.DPass.Location = new System.Drawing.Point(393, 133);
             this.DPass.Name = "DPass";
             this.DPass.Size = new System.Drawing.Size(121, 16);
             this.DPass.TabIndex = 89;
@@ -406,7 +410,7 @@ namespace Equipo1_HES
             // 
             this.DName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DName.Location = new System.Drawing.Point(393, 51);
+            this.DName.Location = new System.Drawing.Point(393, 41);
             this.DName.Name = "DName";
             this.DName.Size = new System.Drawing.Size(121, 16);
             this.DName.TabIndex = 88;
@@ -416,7 +420,7 @@ namespace Equipo1_HES
             this.txtType.AutoSize = true;
             this.txtType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtType.ForeColor = System.Drawing.Color.DimGray;
-            this.txtType.Location = new System.Drawing.Point(308, 51);
+            this.txtType.Location = new System.Drawing.Point(308, 41);
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(83, 21);
             this.txtType.TabIndex = 87;
@@ -427,11 +431,55 @@ namespace Equipo1_HES
             this.txtUsers.AutoSize = true;
             this.txtUsers.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUsers.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsers.Location = new System.Drawing.Point(265, 142);
+            this.txtUsers.Location = new System.Drawing.Point(265, 132);
             this.txtUsers.Name = "txtUsers";
             this.txtUsers.Size = new System.Drawing.Size(126, 21);
             this.txtUsers.TabIndex = 86;
             this.txtUsers.Text = "CONTRASEÑA:";
+            // 
+            // DDisp
+            // 
+            this.DDisp.CalendarFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DDisp.CalendarMonthBackground = System.Drawing.Color.White;
+            this.DDisp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DDisp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DDisp.Location = new System.Drawing.Point(393, 229);
+            this.DDisp.Name = "DDisp";
+            this.DDisp.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DDisp.ShowCheckBox = true;
+            this.DDisp.Size = new System.Drawing.Size(121, 23);
+            this.DDisp.TabIndex = 104;
+            this.DDisp.Value = new System.DateTime(2022, 5, 12, 22, 24, 42, 0);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(245, 229);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 21);
+            this.label3.TabIndex = 103;
+            this.label3.Text = "DISPONIBILIDAD:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(32, 220);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 30);
+            this.button1.TabIndex = 105;
+            this.button1.Text = "Administrar Pacientes";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AdmDocEdit
             // 
@@ -439,6 +487,8 @@ namespace Equipo1_HES
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(680, 380);
+            this.Controls.Add(this.DDisp);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.DCons);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.DSpec);
@@ -511,5 +561,8 @@ namespace Equipo1_HES
         private System.Windows.Forms.TextBox DName;
         private System.Windows.Forms.Label txtType;
         private System.Windows.Forms.Label txtUsers;
+        private System.Windows.Forms.DateTimePicker DDisp;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

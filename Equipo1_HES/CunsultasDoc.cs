@@ -14,7 +14,7 @@ namespace Equipo1_HES
 {
     public partial class CunsultasDoc : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Hospital 2.0\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         public CunsultasDoc()
         {
@@ -69,6 +69,27 @@ namespace Equipo1_HES
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DocDispAdd FormDocDispAdd = new DocDispAdd();
+            FormDocDispAdd.Show();
+            this.Hide();
+        }
+
+        private void BtnConsulta_Click(object sender, EventArgs e)
+        {
+            CunsultasDoc Consultas = new CunsultasDoc();
+            Consultas.Show();
+            this.Hide();
+        }
+
+        private void AdmDocBtn_Click(object sender, EventArgs e)
+        {
+            DocProf DocProf = new DocProf();
+            DocProf.Show();
+            this.Hide();
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Equipo1_HES
 
         }
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Hospital 2.0\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void MostrarCons()
         {
@@ -110,6 +110,13 @@ namespace Equipo1_HES
         {
             LoginHES FormLogin = new LoginHES();
             FormLogin.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AdmPacDel FormPac = new AdmPacDel();
+            FormPac.Show();
             this.Hide();
         }
     }

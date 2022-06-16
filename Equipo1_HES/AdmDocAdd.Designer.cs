@@ -34,6 +34,7 @@ namespace Equipo1_HES
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.CerrarBtn = new System.Windows.Forms.Button();
             this.AdmHomeBtn = new System.Windows.Forms.Button();
             this.AdmConBtn = new System.Windows.Forms.Button();
@@ -101,6 +102,7 @@ namespace Equipo1_HES
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.CerrarBtn);
             this.panel1.Controls.Add(this.AdmHomeBtn);
             this.panel1.Controls.Add(this.AdmConBtn);
@@ -110,6 +112,25 @@ namespace Equipo1_HES
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 380);
             this.panel1.TabIndex = 39;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(31, 211);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 30);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Administrar Pacientes";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CerrarBtn
             // 
@@ -140,7 +161,7 @@ namespace Equipo1_HES
             this.AdmHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdmHomeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdmHomeBtn.ForeColor = System.Drawing.Color.Black;
-            this.AdmHomeBtn.Location = new System.Drawing.Point(31, 245);
+            this.AdmHomeBtn.Location = new System.Drawing.Point(31, 280);
             this.AdmHomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdmHomeBtn.Name = "AdmHomeBtn";
             this.AdmHomeBtn.Size = new System.Drawing.Size(159, 30);
@@ -498,5 +519,6 @@ namespace Equipo1_HES
         private System.Windows.Forms.ComboBox DSpec;
         private System.Windows.Forms.ComboBox DCons;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }

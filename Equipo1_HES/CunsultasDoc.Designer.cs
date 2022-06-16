@@ -32,13 +32,15 @@ namespace Equipo1_HES
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CunsultasDoc));
             this.ConsultasDoc = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnAtras = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.BtnMin = new System.Windows.Forms.PictureBox();
+            this.BtnConsulta = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.AdmDocBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultasDoc)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -54,39 +56,22 @@ namespace Equipo1_HES
             this.ConsultasDoc.Location = new System.Drawing.Point(240, 136);
             this.ConsultasDoc.Name = "ConsultasDoc";
             this.ConsultasDoc.RowTemplate.Height = 25;
-            this.ConsultasDoc.Size = new System.Drawing.Size(408, 164);
+            this.ConsultasDoc.Size = new System.Drawing.Size(408, 184);
             this.ConsultasDoc.TabIndex = 129;
             this.ConsultasDoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ConsultasDoc_CellContentClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.BtnConsulta);
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.AdmDocBtn);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Location = new System.Drawing.Point(-3, -2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(225, 383);
             this.panel1.TabIndex = 130;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(31, 138);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 30);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Registrar Disponibilidad";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -119,13 +104,13 @@ namespace Equipo1_HES
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(299, 65);
+            this.label6.Location = new System.Drawing.Point(330, 66);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(263, 25);
+            this.label6.Size = new System.Drawing.Size(232, 24);
             this.label6.TabIndex = 131;
-            this.label6.Text = "CONSULTAS PREBISTAS";
+            this.label6.Text = "CONSULTAS PREVISTAS";
             // 
             // BtnAtras
             // 
@@ -144,6 +129,7 @@ namespace Equipo1_HES
             this.BtnAtras.TabIndex = 132;
             this.BtnAtras.Text = "Atras";
             this.BtnAtras.UseVisualStyleBackColor = false;
+            this.BtnAtras.Visible = false;
             this.BtnAtras.Click += new System.EventHandler(this.BtnAtras_Click);
             // 
             // btnCerrar
@@ -167,6 +153,63 @@ namespace Equipo1_HES
             this.BtnMin.TabIndex = 134;
             this.BtnMin.TabStop = false;
             this.BtnMin.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // BtnConsulta
+            // 
+            this.BtnConsulta.BackColor = System.Drawing.Color.Transparent;
+            this.BtnConsulta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnConsulta.BackgroundImage")));
+            this.BtnConsulta.FlatAppearance.BorderSize = 0;
+            this.BtnConsulta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnConsulta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConsulta.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnConsulta.ForeColor = System.Drawing.Color.Black;
+            this.BtnConsulta.Location = new System.Drawing.Point(31, 210);
+            this.BtnConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnConsulta.Name = "BtnConsulta";
+            this.BtnConsulta.Size = new System.Drawing.Size(159, 30);
+            this.BtnConsulta.TabIndex = 44;
+            this.BtnConsulta.Text = "Consultar Pacientes";
+            this.BtnConsulta.UseVisualStyleBackColor = false;
+            this.BtnConsulta.Click += new System.EventHandler(this.BtnConsulta_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(31, 171);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 30);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Registrar Disponibilidad";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // AdmDocBtn
+            // 
+            this.AdmDocBtn.BackColor = System.Drawing.Color.Transparent;
+            this.AdmDocBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdmDocBtn.BackgroundImage")));
+            this.AdmDocBtn.FlatAppearance.BorderSize = 0;
+            this.AdmDocBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.AdmDocBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AdmDocBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AdmDocBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AdmDocBtn.ForeColor = System.Drawing.Color.Black;
+            this.AdmDocBtn.Location = new System.Drawing.Point(31, 128);
+            this.AdmDocBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AdmDocBtn.Name = "AdmDocBtn";
+            this.AdmDocBtn.Size = new System.Drawing.Size(159, 30);
+            this.AdmDocBtn.TabIndex = 42;
+            this.AdmDocBtn.Text = "Perfil";
+            this.AdmDocBtn.UseVisualStyleBackColor = false;
+            this.AdmDocBtn.Click += new System.EventHandler(this.AdmDocBtn_Click);
             // 
             // CunsultasDoc
             // 
@@ -200,10 +243,12 @@ namespace Equipo1_HES
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnAtras;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox BtnMin;
+        private System.Windows.Forms.Button BtnConsulta;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AdmDocBtn;
     }
 }

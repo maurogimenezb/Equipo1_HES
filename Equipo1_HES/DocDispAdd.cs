@@ -19,12 +19,12 @@ namespace Equipo1_HES
         }
 
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Hospital 2.0\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void ActDisp()
         {
             con.Open();
-            SqlCommand leer = new SqlCommand("Select * from DoctorTbl where DocId='" + DocId.Text + "'", con);
+            SqlCommand leer = new SqlCommand("Select * from DoctorTbl where DocId='" + DocId.Text + "'",  con);
             SqlDataReader datos = leer.ExecuteReader();
 
             if (datos.Read() == true)
@@ -56,6 +56,11 @@ namespace Equipo1_HES
                     cmd.Parameters.AddWithValue("@DD", DispDat.Value.Date);
                     cmd.Parameters.AddWithValue("@key", DocId.Text);
                     cmd.ExecuteNonQuery();
+
+                   // SqlCommand cmd1 = new SqlCommand("update CitaTbl set FechaCon=@FC where DocName=@DN", con);
+                   // cmd1.Parameters.AddWithValue("@FC", DispDat.Value.Date);
+                    //cmd1.Parameters.AddWithValue("@DN", DName.Text);
+                    //cmd1.ExecuteNonQuery();
                     MessageBox.Show("Disponibilidad Agregado");
 
                     con.Close();
@@ -108,6 +113,13 @@ namespace Equipo1_HES
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BtnConsulta_Click(object sender, EventArgs e)
+        {
+            CunsultasDoc Consultas = new CunsultasDoc();
+            Consultas.Show();
+            this.Hide();
         }
     }
 }
