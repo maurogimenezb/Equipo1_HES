@@ -15,7 +15,7 @@ namespace Equipo1_HES
     public partial class PacProfUpd : Form
     {
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Hospital 2.0\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         public PacProfUpd()
         {
@@ -91,6 +91,13 @@ namespace Equipo1_HES
                 cmd.Parameters.AddWithValue("@PCI", TxtCI.Text);
                 cmd.Parameters.AddWithValue("@key", TxtId.Text);
                 cmd.ExecuteNonQuery();
+
+                SqlCommand cmd1 = new SqlCommand("update CitaTbl set PacName=@PN,PacSurn=@PS,PacCi=@PCI where PacCi=@key", con);
+                cmd1.Parameters.AddWithValue("@PN", TxtName.Text);
+                cmd1.Parameters.AddWithValue("@PS", TxtLastName.Text);
+                cmd1.Parameters.AddWithValue("@PCI", TxtCI.Text);
+                cmd1.Parameters.AddWithValue("@key", PacLogged.ci);
+                cmd1.ExecuteNonQuery();
                 MessageBox.Show("Perfil Modificado");
 
                 con.Close();

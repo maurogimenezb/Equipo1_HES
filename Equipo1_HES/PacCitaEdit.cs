@@ -15,7 +15,7 @@ namespace Equipo1_HES
     public partial class PacCitaEdit : Form
     {
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Hospital 2.0\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         public PacCitaEdit()
         {
@@ -65,7 +65,11 @@ namespace Equipo1_HES
 
         private void MostrarDoc()
         {
-            
+            DocCombo.Text = string.Empty;
+            CBoxFecha.Text = string.Empty;
+            CBoxHo.Text = string.Empty;
+            i = 0;
+
             con.Open();
 
             if (SpecCombo.SelectedIndex == 0)
@@ -130,7 +134,7 @@ namespace Equipo1_HES
 
         private void DocCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Bogado");
+            MessageBox.Show("Se ha seleccionado correctamnete");
             MostrarFecha();
         }
 
@@ -282,7 +286,7 @@ namespace Equipo1_HES
 
 
                     }
-                    else if (SpecCombo.Text == "Pssicologia")
+                    else if (SpecCombo.Text == "Psicologia")
                     {
 
                         string[] horaPsicologia = new string[10];
@@ -339,8 +343,15 @@ namespace Equipo1_HES
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            if (SpecCombo.Text == "" && DocCombo.Text == "" && CBoxFecha.Text == "" && CBoxHo.Text == "")
+            MessageBox.Show(SpecCombo.Text+ " "+ DocCombo.Text+ " "+ CBoxFecha.Text+ " "+ CBoxHo.Text);
+            if(SpecCombo.Text == "" || DocCombo.Text == "" || CBoxFecha.Text == "" || CBoxHo.Text == "" || Id.Text == "")
             {
+                MessageBox.Show("Queda campos vacios, Por favor volver a verificar");
+                con.Close();
+            }
+            else
+            {
+                
                 con.Open();
                 //  string query = "update DoctorTbl set DocName= '" + DName.Text + "', DocPass= '" + DPass.Text + "', DocSpec= '" + DSpec.Text + "', DocCon= '" + DCons.Text + "', DocLastName= '" + DLastName.Text + "', DocUser= '" + DUser.Text + "' where DocId= " + DocId.Text + "";
                 string query = "update CitaTbl set DocName= '" + DocCombo.Text + "', DocSpec='" + SpecCombo.Text + "', FechaCon='" + CBoxFecha.Text + "', HoraCon='" + CBoxHo.Text + "' where Id=" + Id.Text + "";
@@ -350,10 +361,8 @@ namespace Equipo1_HES
                 con.Close();
                 MostarCita();
             }
-            else
-            {
-                MessageBox.Show("Queda campos vacios, Por favor volver a verificar");
-            }
+            CBoxHo.Items.Clear();
+            CBoxHo.Text = string.Empty;
         }
 
         private void CBoxFecha_SelectedIndexChanged(object sender, EventArgs e)

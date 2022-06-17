@@ -21,7 +21,7 @@ namespace Equipo1_HES
 
         }
         // Hacemos la conexion a la BD
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mauro\OneDrive\Escritorio\CLASES 2022\LP2\PROYECTO FINAL - HES\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nelson\Desktop\Materias 2022\Hospital 2.0\Base de datos\BD_HES.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void MostrarDoc()
         {
@@ -57,6 +57,7 @@ namespace Equipo1_HES
             {
                 DocId.Text = AdmDocDGV.CurrentRow.Cells[0].Value.ToString();
                 DName.Text = AdmDocDGV.CurrentRow.Cells[1].Value.ToString();
+                txtFecha.Text = AdmDocDGV.CurrentRow.Cells[1].Value.ToString();
                 DPass.Text = AdmDocDGV.CurrentRow.Cells[2].Value.ToString();
                 DSpec.Text = AdmDocDGV.CurrentRow.Cells[3].Value.ToString();
                 DDisp.Text = AdmDocDGV.CurrentRow.Cells[4].Value.ToString();
@@ -74,6 +75,7 @@ namespace Equipo1_HES
 
         private void ModBtn_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(txtFecha.Text);
             con.Open();
             //string query = "update DoctorTbl set DocName= '"+DName.Text+ "', DocPass= '" + DPass.Text + "', DocSpec= '" + DSpec.Text + "', DocDisp= '" + DDisp.Text + "', DocCon= '" + DCons.Text + "', DocLastName= '" + DLastName.Text + "', DocUser= '" + DUser.Text + "' where DocId= " + DocId.Text + "";
             //SqlCommand cmd = new SqlCommand(query, con);
@@ -89,12 +91,12 @@ namespace Equipo1_HES
             cmd.Parameters.AddWithValue("@key", DocId.Text);
             cmd.ExecuteNonQuery();
 
-            SqlCommand cmd1 = new SqlCommand("update CitaTbl set FechaCon=@FC, DocSpec=@DSs where DocName=@DN", con);
-            cmd1.Parameters.AddWithValue("@FC", DDisp.Value.Date);
-            cmd1.Parameters.AddWithValue("@DN", DName.Text);
-            cmd1.Parameters.AddWithValue("@DSs", DSpec.SelectedItem.ToString());
+            SqlCommand cmd1 = new SqlCommand("update CitaTbl set DocName=@Ac,FechaCon=@FC where  DocName=@DN", con);
+            cmd1.Parameters.AddWithValue("@FC", DDisp.Value.ToString());
+            cmd1.Parameters.AddWithValue("@DN", txtFecha.Text);
+            cmd1.Parameters.AddWithValue("@Ac", DName.Text);
+            
             cmd1.ExecuteNonQuery();
-
 
             MessageBox.Show("Se ha modificado doctor");
             con.Close();
